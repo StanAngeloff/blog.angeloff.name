@@ -4,7 +4,7 @@ title:      Stan Angeloff’s blog
 safe:       false
 lsi:        false
 pygments:   true
-permalink:  /post/:categories/:year/:month/:day/:title/index.html
+permalink:  /post/:categories/:year/:month/:day/:title/
 markdown:   redcarpet
 include:    [
   'robots.txt',
