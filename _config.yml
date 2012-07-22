@@ -7,9 +7,9 @@ pygments:   true
 permalink:  /post/:categories/:year/:month/:day/:title/
 markdown:   redcarpet
 include:    [
-  'robots.txt',
-  'rss.xml',
-  'sitemap.xml'
+  "robots.txt",
+  "rss.xml",
+  "sitemap.xml"
 ]
 
 redcarpet:
