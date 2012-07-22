@@ -11,8 +11,7 @@
   code,
   kbd,
   pre,
-  samp,
-  { font-family: $mono-family; }
+  samp { font-family: $mono-family; }
 }
 
 @mixin no-margin  { margin: 0;  }
