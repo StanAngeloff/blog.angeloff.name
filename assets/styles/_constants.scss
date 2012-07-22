@@ -1,0 +1,37 @@
+$base-font-size:      16px;
+$base-line-height:    $base-font-size * 1.4;
+$base-font-family:    'PT Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', tahoma, verdana, arial, sans-serif;
+$heading-font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', 'URW Palladio L', Cambria, Georgia, 'Times New Roman', times, serif;
+$mono-font-family:    Inconsolata, Consolas, Menlo, 'Liberation Mono', 'Courier New', courier, monospace;
+
+$legacy-support-for-ie:  true;
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: $legacy-support-for-ie;
+$legacy-support-for-ie8: $legacy-support-for-ie;
+
+$theme:
+  page #fff
+  text #101010
+;
+
+$levels:
+  darkest  -75%
+  darker   -50%
+  dark     -25%
+  darkish  -10%
+  original   0%
+  lightish  10%
+  light     25%
+  lighter   50%
+  lightest  75%
+;
+
+$adjust-rates:
+  smallest -50%
+  smaller  -35%
+  small    -20%
+  normal     0%
+  large     20%
+  larger    35%
+  largest   50%
+;

@@ -1,0 +1,31 @@
+$breakpoint-tiny:   420px;
+$breakpoint-small:  650px;
+$breakpoint-medium: 960px;
+
+@mixin tiny-screen($mode: false) {
+  @media only screen and (max-#{if($mode,"#{$mode}-",'')}width: $breakpoint-tiny) {
+    @content;
+  }
+}
+
+@mixin small-screen($mode: false) {
+  @media only screen and (max-#{if($mode,"#{$mode}-",'')}width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin medium-screen($mode: false) {
+  @media only screen and (min-#{if($mode,"#{$mode}-",'')}width: ($breakpoint-small + 1)) and (max-#{if($mode,"#{$mode}-",'')}width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin small-and-medium-screen($mode: false) {
+  @media only screen and (max-#{if($mode,"#{$mode}-",'')}width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @content;
+}

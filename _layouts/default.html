@@ -1,6 +1,10 @@
 <!DOCTYPE html5>
 {% include top.html %}
 
+{% if page.title %}
+  <h2>{{ page.title | xml_escape }}</h2>
+{% endif %}
+
   {{ content }}
 
 {% include bottom.html %}

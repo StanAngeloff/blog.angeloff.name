@@ -1,6 +1,10 @@
 base:       http://blog.angeloff.name
 title:      Stan Angeloff’s blog
 
+google:
+  account: UA-7188794-1
+  domain:  .angeloff.name
+
 safe:       false
 lsi:        false
 pygments:   true

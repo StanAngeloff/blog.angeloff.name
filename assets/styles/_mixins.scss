@@ -1,0 +1,40 @@
+@mixin establish-font($base-family: $base-font-family, $heading-family: $heading-font-family, $mono-family: $mono-font-family) {
+
+  html,
+  button,
+  input,
+  select,
+  textarea { font-family: $base-family; }
+
+  h1, h2, h3, h4, h5, h6 { font-family: $heading-family; }
+
+  code,
+  kbd,
+  pre,
+  samp { font-family: $mono-family; }
+}
+
+@mixin no-margin  { margin: 0;  }
+@mixin no-padding { padding: 0; }
+
+@mixin no-margin-and-padding() {
+  @include no-margin;
+  @include no-padding;
+}
+
+// Make the vertical scrollbar on an element always visible, even if content does not overflow.
+@mixin vertical-scroll-visible {
+  height: 100.1%;
+  overflow-y: scroll;
+}
+
+// Adjust the font size using a percentage of the base font size,
+// avoids having to do `$base-font-size` calculations at the source.
+@mixin adjust-font-size-by($font-size-percentage, $line-height-percentage: 0%) {
+  @include adjust-font-size-to(adjust-by($base-font-size, $font-size-percentage), adjust-by(1, $line-height-percentage));
+}
+
+// Adjust the font size using HTML types, e.g., 'small', 'smaller', etc.
+@mixin adjust-font-size($font-size, $line-height: normal) {
+  @include adjust-font-size-by(value-from-list($font-size, $adjust-rates), value-from-list($line-height, $adjust-rates));
+}

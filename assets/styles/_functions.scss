@@ -1,0 +1,36 @@
+@function value-from-list($key, $list) {
+  $lookup: $key;
+  $target: $list;
+  @if (type-of($lookup) == 'string') {
+    $lookup: -compass-list($lookup);
+  }
+  @for $i from 1 through length($lookup) {
+    $found: '__false';
+    @for $j from 1 through (length($target) / 2) {
+      @if (nth($target, ($j * 2) - 1) == nth($lookup, $i)) {
+        $found: nth($target, ($j * 2));
+      }
+    }
+    @if ($found == '__false') {
+      @warn "The list (#{$list}) does not contain a value for key '#{$key}'.";
+      @return false;
+    }
+    $target: $found;
+  }
+  @return $target;
+}
+
+@function adjust-brightness($colour, $level: original) {
+  $brightness: value-from-list($level, $levels);
+  @if ($brightness < 0%) {
+    @return darken($colour, abs($brightness));
+  }
+  @if ($brightness > 0%) {
+    @return lighten($colour, $brightness);
+  }
+  @return $colour;
+}
+
+@function theme($component, $level: original) {
+  @return adjust-brightness(value-from-list($component, $theme), $level);
+}
