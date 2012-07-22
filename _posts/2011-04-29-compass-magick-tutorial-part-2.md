@@ -1,8 +1,7 @@
 ---
-title:     Compass Magick Tutorial - Part 2
-date:      2011-04-29 16:41:00
-layout:    default
-permalink: /post/5040777009/compass-magick-tutorial-part-2/index.html
+title:  Compass Magick Tutorial - Part 2
+date:   2011-04-29 16:41:00
+layout: default
 ---
 
 There is more to Compass Magick than gradients and borders. In the second part of the tutorial series, we will go through the steps to create a simple 3-state button with an icon.

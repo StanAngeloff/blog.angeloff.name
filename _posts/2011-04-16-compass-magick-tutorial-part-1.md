@@ -1,8 +1,7 @@
 ---
-title:     Compass Magick Tutorial - Part 1
-date:      2011-04-16 17:47:00
-layout:    default
-permalink: /post/4659977659/compass-magick-tutorial-part-1/index.html
+title:  Compass Magick Tutorial - Part 1
+date:   2011-04-16 17:47:00
+layout: default
 ---
 
 Introduction

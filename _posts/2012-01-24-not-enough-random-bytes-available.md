@@ -1,8 +1,7 @@
 ---
-title:     Not enough random bytes available.
-date:      2012-01-24 14:38:00
-layout:    default
-permalink: /post/16404732719/not-enough-random-bytes-available/index.html
+title:  Not enough random bytes available.
+date:   2012-01-24 14:38:00
+layout: default
 ---
 
 ### Please do some other work to give the OS a chance to collect more entropy! (Need more bytes)

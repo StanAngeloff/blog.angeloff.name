@@ -1,8 +1,7 @@
 ---
-title:     Ubuntu 12.04 (Precise) & PHP 5.2.x
-date:      2012-06-18 14:12:00
-layout:    default
-permalink: /post/25357377813/ubuntu-12-04-precise-php-5-2/index.html
+title:  Ubuntu 12.04 (Precise) & PHP 5.2.x
+date:   2012-06-18 14:12:00
+layout: default
 ---
 
 If you get lots of:

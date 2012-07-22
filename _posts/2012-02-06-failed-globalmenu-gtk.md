@@ -1,8 +1,7 @@
 ---
-title:     Failed to load module "globalmenu-gtk" after uninstalling gnome-shell
-date:      2012-02-06 17:53:00
-layout:    default
-permalink: /post/17155714352/failed-globalmenu-gtk/index.html
+title:  Failed to load module "globalmenu-gtk" after uninstalling gnome-shell
+date:   2012-02-06 17:53:00
+layout: default
 ---
 
 If you get:

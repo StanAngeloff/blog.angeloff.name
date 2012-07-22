@@ -1,8 +1,7 @@
 ---
-title:     Cygwin, CoffeeScript & Growl for Windows integration
-date:      2010-08-16 17:24:00
-layout:    default
-permalink: /post/962830463/cygwin-coffeescript-growl-for-windows-integration/index.html
+title:  Cygwin, CoffeeScript & Growl for Windows integration
+date:   2010-08-16 17:24:00
+layout: default
 ---
 
 Let's start by adjusting where [node.js](http://nodejs.org/) looks for libraries. We will need this later on when we use the newly implemented [`-r`](http://github.com/jashkenas/coffee-script/commit/b1b78dca47c83986c9654ec51fd9993f90a795e5) command-line switch in CoffeeScript. Open up your shell init file, in my instance `~/.zshrc`:

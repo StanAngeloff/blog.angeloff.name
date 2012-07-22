@@ -1,8 +1,7 @@
 ---
-title:     Alternative Cygwin terminal & shell
-date:      2010-08-24 10:20:00
-layout:    default
-permalink: /post/1004704485/alternative-cygwin-terminal-shell/index.html
+title:  Alternative Cygwin terminal & shell
+date:   2010-08-24 10:20:00
+layout: default
 ---
 
 I just realised many, if not most, Cygwin users stick with their default terminal which is the *Cygwin Bash Shell*. I never understood why this is the default with each installation. It is no better than *Command Prompt* -- horizontal window resizing is out of the question, custom fonts are limited and mouse support is, well... missing.

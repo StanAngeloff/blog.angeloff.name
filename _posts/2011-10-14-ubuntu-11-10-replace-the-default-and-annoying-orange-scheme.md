@@ -1,8 +1,7 @@
 ---
-title:     Ubuntu 11.10 - Replace the Default (and Annoying) Orange Scheme
-date:      2011-10-14 13:03:00
-layout:    default
-permalink: /post/11431459380/ubuntu-11-10-replace-the-default-and-annoying-orange/index.html
+title:  Ubuntu 11.10 - Replace the Default (and Annoying) Orange Scheme
+date:   2011-10-14 13:03:00
+layout: default
 ---
 
 Switching to Ubuntu 11.10 is painful, ugly and time consuming... but more on that some other time.

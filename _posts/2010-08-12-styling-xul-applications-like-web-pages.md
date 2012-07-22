@@ -1,8 +1,7 @@
 ---
-title:     Styling XUL applications like web pages
-date:      2010-08-13 13:10:00
-layout:    default
-permalink: /post/946701426/styling-xul-applications-like-web-pages/index.html
+title:  Styling XUL applications like web pages
+date:   2010-08-13 13:10:00
+layout: default
 ---
 
 If you don't know of XUL applications there are [many out there](http://www.mozilla.org/projects/mozilla-based.html) in the wild. You are probably using a Mozilla XUL-based app without even realising it.

@@ -1,1 +1,58 @@
-Hello, World! I am a 404 page.
+---
+---
+
+<!DOCTYPE html5>
+<script>
+(function() {
+var mapping = {
+  '931456447':   '/post/2010/08/10/in-need-of-a-simple-web-server/index.html',
+  '936484335':   '/post/2010/08/11/get-my-coffee-compass-and-web-server-in-the-background-please/index.html',
+  '946701426':   '/post/2010/08/13/styling-xul-applications-like-web-pages/index.html',
+  '962830463':   '/post/2010/08/16/cygwin-coffeescript-growl-for-windows-integration/index.html',
+  '966860661':   '/post/2010/08/17/node-paperserve-quick-and-dirty-web-server-from-your-working-directory/index.html',
+  '1004704485':  '/post/2010/08/24/alternative-cygwin-terminal-shell/index.html',
+  '1010207199':  '/post/2010/08/25/building-and-using-node-js-on-windows-32-and-64-bit-through-cygwin/index.html',
+  '1027007406':  '/post/2010/08/29/cd-with-bookmarks-and-auto-completion-for-zsh/index.html',
+  '1104619682':  '/post/2010/09/11/mintty-at-your-fingertips/index.html',
+  '1319580433':  '/post/2010/10/15/git-on-red-hat-enterprise-linux-rhel-4-i386/index.html',
+  '1319772540':  '/post/2010/10/15/vim-7-on-red-hat-enterprise-linux-rhel/index.html',
+  '1490030701':  '/post/2010/11/05/extract-changed-files-from-git-and-prepare-a-deployment/index.html',
+  '2132544289':  '/post/2010/12/07/a-quick-and-dirty-way-to-use-namespaces-in-coffeescript/index.html',
+
+  '3465035915':  '/post/2011/02/23/yoke-a-drop-in-quick-and-dirty-alternative-to-sprockets/index.html',
+  '4659977659':  '/post/2011/04/16/compass-magick-tutorial-part-1/index.html',
+  '5040777009':  '/post/2011/04/29/compass-magick-tutorial-part-2/index.html',
+  '11431459380': '/post/2011/10/14/ubuntu-11-10-replace-the-default-and-annoying-orange-scheme/index.html',
+
+  '16404732719': '/post/2012/01/24/not-enough-random-bytes-available/index.html',
+  '16404872580': '/post/2012/01/24/pacman-syu-barfs-error-xyz-signature-is-unknown-trust/index.html',
+  '16880373225': '/post/2012/02/01/diffing-images-in-git/index.html',
+  '17155714352': '/post/2012/02/06/failed-globalmenu-gtk/index.html',
+  '21975837465': '/post/2012/04/28/ubuntu-12-04-precise-light-menus/index.html',
+  '25357377813': '/post/2012/06/18/ubuntu-12-04-precise-php-5-2/index.html',
+  '26091281290': '/post/2012/06/28/vim-plug-ins-roundup-tips-tricks/index.html',
+};
+for (var id in mapping) {
+  if ( ! Object.prototype.hasOwnProperty.call(mapping, id)) {
+    continue;
+  }
+  if (~location.href.indexOf(id)) {
+    location.replace(mapping[id]);
+  }
+}
+})();
+</script>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title>404 &ndash; {{ site.title | xml_escape }}</title>
+
+  <link rel=alternate type=application/rss+xml title=RSS href="{{ site.base | xml_escape }}/rss.xml">
+  <link rel=icon href="{{ site.base | xml_escape }}/favicon.ico">
+</head>
+<body>
+
+  Whoops, no such page : (
+
+</body>
+</html>
