@@ -1,9 +1,10 @@
-safe:      false
-lsi:       false
-pygments:  true
-paginate:  10
-permalink: date
-markdown:  redcarpet
+safe:       false
+lsi:        false
+pygments:   true
+permalink:  /post/:categories/:year/:month/:day/:title/index.html
+paginate:   10
+permalink:  date
+markdown:   redcarpet
 redcarpet:
   extensions: [
     "autolink",
