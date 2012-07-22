@@ -20,5 +20,12 @@
 <div id=page>
 
 <header>
-  <a href="{{ site.base | xml_escape }}"><h1>{{ site.title | xml_escape }}</h1></a>
+  <aside>
+    <ul class="unstyled inline">
+      <li><a href="https://github.com/StanAngeloff" rel="external"><img src="{{ site.base | xml_escape }}/assets/images/github.png" alt="GitHub" title="GitHub"></a></li>
+      <li><a href="https://twitter.com/StanAngeloff" rel="external"><img src="{{ site.base | xml_escape }}/assets/images/twitter.png" alt="Twitter" title="Twitter"></a></li>
+    </ul>
+  </aside>
+
+  <h1><a href="{{ site.base | xml_escape }}">{{ site.title | xml_escape }}</a></h1>
 </header>

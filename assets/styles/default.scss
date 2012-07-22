@@ -18,6 +18,102 @@ html {
   @include vertical-scroll-visible;
 }
 
+small { color: theme(text, light); }
+
+$code-background:   theme(code background);
+$code-base-opacity: theme(code opacity);
+
+pre {
+  background-color: rgba($code-background, $code-base-opacity);
+  border: rhythm(0.075) solid rgba($code-background, $code-base-opacity * 2);
+  @include border-radius(rhythm(0.25));
+  padding: rhythm(0.5);
+  @include box-shadow(inset 0 0 rhythm(0.325) rgba($code-background, $code-base-opacity * 4));
+}
+
+code {
+  background-color: rgba($code-background, $code-base-opacity);
+  border: rhythm(0.075) solid rgba($code-background, $code-base-opacity * 2);
+  @include border-radius(rhythm(0.125));
+  padding: rhythm(0.075) rhythm(0.125);
+  @include box-shadow(inset 0 0 rhythm(0.125) rgba($code-background, $code-base-opacity * 4));
+
+  pre & {
+    background-color: transparent;
+    border: 0;
+    @include border-radius(0);
+    padding: 0;
+    @include box-shadow(none);
+  }
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: rhythm(0.75);
+  border-left: rhythm(0.125) solid theme(page, darkish);
+  font-style: italic;
+}
+
 #page {
   @include container;
+  padding-bottom: rhythm();
+
+  & > header aside {
+    float: right;
+    margin-left: rhythm(0.5);
+  }
+
+  & > footer {
+    text-align: right;
+
+    small { line-height: 100%; }
+  }
+}
+
+.unstyled { @include no-bullets; }
+
+.inline {
+  @include no-margin-and-padding;
+
+  &, & li { @include inline-block; }
+
+  a { border-bottom: 0; }
+}
+
+.long {
+  @include no-margin-and-padding;
+
+  li {
+    @include trailer(0.5);
+  }
+}
+
+a {
+  text-decoration: none;
+  border-bottom: rhythm(0.075) solid rgba(theme(text), 0.125);
+}
+
+// - Gist --------------------------------------------------------------------
+
+#page .gist {
+
+  .gist-file {
+    border: 0;
+
+    &, .gist-data pre { font-family: $mono-font-family; }
+
+    .gist-data pre { padding: rhythm(0.5) !important; }
+  }
+
+  .gist-syntax {
+    background-color: rgba($code-background, $code-base-opacity);
+    border-bottom: 0;
+
+    * {
+      font-style: normal;
+      font-weight: normal;
+    }
+  }
+
+  .gist-meta { background-color: transparent; }
 }

@@ -12,6 +12,10 @@ $legacy-support-for-ie8: $legacy-support-for-ie;
 $theme:
   page #fff
   text #101010
+  code (
+    background #036
+    opacity    0.0425
+  )
 ;
 
 $levels:
