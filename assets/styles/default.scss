@@ -106,11 +106,14 @@ a {
 
     &, .gist-data pre { font-family: $mono-font-family; }
 
-    .gist-data pre { padding: rhythm(0.5) !important; }
+    .gist-data pre {
+      padding: rhythm(0.5) !important;
+      background-color: rgba($code-background, $code-base-opacity) !important;
+    }
   }
 
   .gist-syntax {
-    background-color: rgba($code-background, $code-base-opacity);
+    background-color: transparent;
     border-bottom: 0;
 
     * {
