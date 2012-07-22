@@ -6,16 +6,22 @@ layout: default
 
 If you get lots of:
 
-    configure: error: Cannot find libXXX under /usr.
+{% highlight bash %}
+configure: error: Cannot find libXXX under /usr.
+{% endhighlight %}
 
 when you attempt to `./configure` PHP 5.2.x (and possibly earlier series as well), try appending:
 
-    --with-libdir=lib/x86_64-linux-gnu
+{% highlight bash %}
+--with-libdir=lib/x86_64-linux-gnu
+{% endhighlight %}
 
 This instructs the script to look for libraries under `/usr/lib/x86_64-linux-gnu` instead of `/usr/lib`. If this doesn't work for you, try running:
 
-    $ sudo updatedb
-    $ locate 'libXXX' | grep 'so$'
+{% highlight bash %}
+$ sudo updatedb
+$ locate 'libXXX' | grep 'so$'
+{% endhighlight %}
 
 Which should output the directory where the binary `libXXX` (e.g., `libmysqlclient`) is installed.
 

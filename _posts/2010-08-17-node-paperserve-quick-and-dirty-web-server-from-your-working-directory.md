@@ -6,7 +6,9 @@ layout: default
 
 **Install**
 
-    $ npm install paperserve
+{% highlight bash %}
+$ npm install paperserve
+{% endhighlight %}
 
 **Usage**
 

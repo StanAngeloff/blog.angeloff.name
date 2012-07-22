@@ -25,7 +25,6 @@ I encourage you to try [**Zsh**](http://www.zsh.org/) as an alternative to Bash 
 
 You can install MinTTY and ZSH using Cygwin's [setup.exe](http://www.cygwin.com/setup.exe).
 
-
 ### MinTTY at your fingertips
 
 Having a terminal keystroke away is essential in my day-to-day work. I need to be able to quickly get in and out of it -- [read how to do it](http://blog.angeloff.name/post/1104619682/mintty-at-your-fingertips).

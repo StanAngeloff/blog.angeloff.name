@@ -12,12 +12,14 @@ Moving over to Git has thought me many things. I used to love [my Cygwin console
 
 Paste the above in a script on your `$PATH`. Using `gitk` or another tool find the first commit you want to include in your extract. Invoke the script as below:
 
-    $ git-extract initial_hash_of_first_commit_to_include..HEAD
-    Do you wish to remove '.deployments' first? [Y/n]
-      Purging '.deployments'...
-      Done.
-    Processing 10 files... 100.00%
-    Done.
+{% highlight bash %}
+$ git-extract initial_hash_of_first_commit_to_include..HEAD
+Do you wish to remove '.deployments' first? [Y/n]
+  Purging '.deployments'...
+  Done.
+Processing 10 files... 100.00%
+Done.
+{% endhighlight %}
 
 A new directory `.deployments` will be created with all files that have changed in the given commits range. If files were deleted, a `.delete` file will be generated and you have to handle these manually.
 

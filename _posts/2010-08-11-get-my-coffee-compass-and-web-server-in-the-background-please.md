@@ -10,5 +10,7 @@ This is a simple **bash** script I run from my project's working directory to ge
 
 You need an empty `compass.config.rb` file to be present. Mine usually has some goodness in it:
 
-    images_dir      = 'static/images'
-    relative_assets = true
+{% highlight ruby %}
+images_dir      = 'static/images'
+relative_assets = true
+{% endhighlight %}

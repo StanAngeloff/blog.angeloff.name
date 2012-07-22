@@ -22,24 +22,30 @@ I stumbled upon [Ivan Čukić's excellent blog post](http://ivan.fomentgroup.org
 
 Paste the above code at the bottom of your `~/.zshrc` file. Restart your terminal and run `cdb_edit`. This should bring up an empty buffer in your `$EDITOR`. To define shortcuts, use `shortcut  absolute/path`. Here is an example file:
 
-    $ cdb_edit
+{% highlight bash %}
+$ cdb_edit
 
-    public    /cygdrive/d/Workspace/public/
-    projects  /cygdrive/d/Workspace/projects/
+public    /cygdrive/d/Workspace/public/
+projects  /cygdrive/d/Workspace/projects/
+{% endhighlight %}
 
 ### Try it Out
 
 Using the database above as an example:
 
-    ~ $ cdb public
-    /cygdrive/d/Workspace/public/ $ 
+{% highlight bash %}
+~ $ cdb public
+/cygdrive/d/Workspace/public/ $ 
+{% endhighlight %}
 
 ## The 'Fat' Option
 
 If you are looking for something more sophisticated which wouldn't involve maintaining a database using vim then you need [Jump, a bookmarking system for the bash and zsh shells](http://github.com/flavio/jump). It's a great tool and quite easy to install too:
 
-    $ gem install jump
-    $ cp `gem contents jump | grep zsh` ~/.jump_shell_driver
+{% highlight bash %}
+$ gem install jump
+$ cp `gem contents jump | grep zsh` ~/.jump_shell_driver
+{% endhighlight %}
 
 and a line in your `~/.zshrc` to make the magic happen: `source ~/.jump_shell_driver`.
 

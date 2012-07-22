@@ -23,23 +23,29 @@ Plug-ins
 
 I like my code well indented and aligned... but it is a pain to keep it organised by hand. Tabular does this instead of you. It is extremely helpful and can deal with any coding style preference you may have. Take, for example, this input:
 
-    <?php
+{% highlight php %}
+<?php
 
-    $hello = 'world';
-    $how = 'are you';
-    $when = 'today';
+$hello = 'world';
+$how = 'are you';
+$when = 'today';
+{% endhighlight %}
 
 For quick access to Tabular, set up key bindings like so to trigger indentation on `=`:
 
-    nnoremap <leader>a= :Tabularize /=<CR>
+{% highlight vim %}
+nnoremap <leader>a= :Tabularize /=<CR>
+{% endhighlight %}
 
 Pressing `\a` (where `\` is the leader key) yields:
 
-    <?php
+{% highlight php %}
+<?php
 
-    $hello = 'world';
-    $how   = 'are you';
-    $when  = 'today';
+$hello = 'world';
+$how   = 'are you';
+$when  = 'today';
+{% endhighlight %}
 
 There, all nice and tidy.
 
@@ -49,21 +55,27 @@ There, all nice and tidy.
 
 This one is a must-have for HTML folks. Take this input:
 
-    ul>li*5>a>span
+{% highlight html %}
+ul>li*5>a>span
+{% endhighlight %}
 
 Re-map Zen Coding to suit your needs:
 
-    let g:user_zen_leader_key = '<leader>z'
+{% highlight vim %}
+let g:user_zen_leader_key = '<leader>z'
+{% endhighlight %}
 
 and voila!
 
-    <ul>
-      <li><a href=""><span></span></a></li>
-      <li><a href=""><span></span></a></li>
-      <li><a href=""><span></span></a></li>
-      <li><a href=""><span></span></a></li>
-      <li><a href=""><span></span></a></li>
-    </ul>
+{% highlight html %}
+<ul>
+  <li><a href=""><span></span></a></li>
+  <li><a href=""><span></span></a></li>
+  <li><a href=""><span></span></a></li>
+  <li><a href=""><span></span></a></li>
+  <li><a href=""><span></span></a></li>
+</ul>
+{% endhighlight %}
 
 ### **[othree/html5.vim](https://github.com/othree/html5.vim)**
 
@@ -103,13 +115,15 @@ Undone your changes, tried something different and then realised you want to get
 
 Restart Vim and avoid losing your editing session. This plug-in saves your Vim sessions and restores them so it is like you never even left Vim. The default options are somewhat intrusive, but it doesn't take too much to customise the plug-in to behave:
 
-    " Don't prompt on Vim close if we want to save the session.
-    let g:session_autosave=0
-    " Don't auto-load saved sessions on Vim start.
-    let g:session_autoload=0
-    " Re-map for easy session saving/restore.
-    noremap <leader>ss :SaveSession user<CR>
-    noremap <leader>sr :OpenSession user<CR>
+{% highlight vim %}
+" Don't prompt on Vim close if we want to save the session.
+let g:session_autosave=0
+" Don't auto-load saved sessions on Vim start.
+let g:session_autoload=0
+" Re-map for easy session saving/restore.
+noremap <leader>ss :SaveSession user<CR>
+noremap <leader>sr :OpenSession user<CR>
+{% endhighlight %}
 
 Whenever you feel you need to close Vim, but want to be able to get back your opened buffers, use `\ss` (where `\` is the leader key) before `:q`uitting.  Next time you start Vim, use `\sr` to restore.
 
@@ -125,11 +139,13 @@ CtrlP is a great alternative with a slew of new features to offer. You still get
 
 I don't like having plug-ins register their key bindings without my say, so I turn off the defaults for CtrlP and create personalised mappings:
 
-    " Don't use <C-P>, leave it available for something else.
-    let g:ctrlp_map=''
+{% highlight vim %}
+" Don't use <C-P>, leave it available for something else.
+let g:ctrlp_map=''
 
-    nnoremap <silent> <leader>o :<C-U>CtrlPCurWD<CR>
-    nnoremap <silent> <leader>b :<C-U>CtrlPBufTag<CR>
+nnoremap <silent> <leader>o :<C-U>CtrlPCurWD<CR>
+nnoremap <silent> <leader>b :<C-U>CtrlPBufTag<CR>
+{% endhighlight %}
 
 Use `\o` (where `\` is the leader key) to fuzzy match and open a file and `\b` to fuzzy match and move to a tag in the current buffer (quickly navigate to a method, etc.)
 
@@ -155,13 +171,19 @@ This plug-in provides syntax highlighting for the new CSS3 properties. It is a b
 
 Lastly, I came across this plug-in several weeks ago and have been using it on a daily basis ever since. It deals with text objects for lists, e.g.:
 
-    <?php
+{% highlight php %}
+<?php
 
-    print implode(', ', ['Hello', 'World', 'How are' <|>. ' you?']);
+print implode(', ', ['Hello', 'World', 'How are' <|>. ' you?']);
+{% endhighlight %}
 
-Given the cursor position is defined by `<|>` above, pressing `vi,` will select (in visual mode):
+Given the cursor position is defined by `<|>` above, pressing `ci,` will result in:
 
-    'How are' <|>. ' you?'
+{% highlight php %}
+<?php
+
+print implode(', ', ['Hello', 'World', <|>]);
+{% endhighlight %}
 
 This is a great and quick way to change function arguments, list values, etc.
 
@@ -172,7 +194,9 @@ Tips & Tricks
 
 One of the greatest strengths of Vim is having your hands rest comfortably on the home row whilst you are editing away. It bugged me I can't do the same with my screen, i.e., focus my attention on a given area and have everything I am working on flow in that particular line of screen. You can achieve this in Vim by setting the `scrolloff` option to a relatively big value:
 
-    set scrolloff=120  " Total LoC visible on screen divided by 2 or higher.
+{% highlight vim %}
+set scrolloff=120  " Total LoC visible on screen divided by 2 or higher.
+{% endhighlight %}
 
 It takes some getting used to, but eventually (hopefully) you will find there is less strain on your eyes.
 
@@ -180,28 +204,36 @@ It takes some getting used to, but eventually (hopefully) you will find there is
 
 I have always found this particular 'feature' of Vim to be extremely annoying.  That is until I decided to try and live with it for at least a week. Coupled with the technique above, the editor becomes static and all that ever changes is the buffer itself. You can also much more easily navigate to a particular line since you know how many lines away it happens to be.
 
-    set rnu  " Show relative line numbers.
+{% highlight vim %}
+set rnu  " Show relative line numbers.
+{% endhighlight %}
 
 ### **Long Lines Slow Down Vim**
 
 It has happened to all of us. You accidentally open a minified JavaScript file, Vim crawls to a complete halt and `<C-C>` cannot get you control of the editor back. This usually happens because Vim is having trouble syntax highlighting long lines. By setting a limit on the characters Vim will highlight per line at most, you can avoid situations like the above.
 
-    set synmaxcol=512
+{% highlight vim %}
+set synmaxcol=512
+{% endhighlight %}
 
 ### **Dreadful 'Ex' mode**
 
 `Q` must be one of the most useless default key bindings in Vim.  I have yet to hear someone making extensive use of 'Ex' mode. It is much more efficient having `Q` save and quit the current buffer (and you would also never have to type `visual` again):
 
-    nnoremap <silent> Q ZZ
+{% highlight vim %}
+nnoremap <silent> Q ZZ
+{% endhighlight %}
 
 ### **Quick Indentation Settings**
 
 Very often files open with the wrong indentation settings. 2, 4 and 8 are the most common setting for spaces per indent:
 
-    " Key bindings for adjusting the tab/shift width.
-    nnoremap <leader>w2 :setlocal tabstop=2<CR>:setlocal shiftwidth=2<CR>
-    nnoremap <leader>w4 :setlocal tabstop=4<CR>:setlocal shiftwidth=4<CR>
-    nnoremap <leader>w8 :setlocal tabstop=8<CR>:setlocal shiftwidth=8<CR>
+{% highlight vim %}
+" Key bindings for adjusting the tab/shift width.
+nnoremap <leader>w2 :setlocal tabstop=2<CR>:setlocal shiftwidth=2<CR>
+nnoremap <leader>w4 :setlocal tabstop=4<CR>:setlocal shiftwidth=4<CR>
+nnoremap <leader>w8 :setlocal tabstop=8<CR>:setlocal shiftwidth=8<CR>
+{% endhighlight %}
 
 Final Words
 -----------

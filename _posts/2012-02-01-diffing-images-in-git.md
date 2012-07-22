@@ -16,4 +16,4 @@ It's not an ultimate solution. It will choke up on large images, it doesn't hand
 
 Overall, I found the PyGtk documentation very easy to read, there are plenty of tutorials around and the [API reference](http://developer.gnome.org/gtk3/3.0/) has all the information one needs.
 
-Tip: in git-cola, <C-D> will open up the configured diff tool for the highlighted file.
+Tip: in git-cola, `<C-D>` will open up the configured diff tool for the highlighted file.
