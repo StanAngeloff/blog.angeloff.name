@@ -27,7 +27,9 @@
   <script type="text/javascript">
   var disqus_shortname  = 'stanangeloff',
       disqus_title      = '{{ page.title | replace:"'","\\'" }}',
-      disqus_identifier = '{% if page.identifier %}{{ page.identifier | replace:"'","\\'" }}{% else %}{{ page.url | replace:"'","\\'" }}{% endif %}',
+{% if page.identifier %}
+      disqus_identifier = '{{ page.identifier | replace:"'","\\'" }}',
+{% endif %}
       disqus_url        = '{{ site.base | replace:"'","\\'" }}{{ page.url | replace:"'","\\'" }}';
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
