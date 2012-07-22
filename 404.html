@@ -42,17 +42,8 @@ for (var id in mapping) {
 }
 })();
 </script>
-<html lang=en>
-<head>
-  <meta charset=utf-8>
-  <title>404 &ndash; {{ site.title | xml_escape }}</title>
-
-  <link rel=alternate type=application/rss+xml title=RSS href="{{ site.base | xml_escape }}/rss.xml">
-  <link rel=icon href="{{ site.base | xml_escape }}/favicon.ico">
-</head>
-<body>
+{% include top.html %}
 
   Whoops, no such page : (
 
-</body>
-</html>
+{% include bottom.html %}
