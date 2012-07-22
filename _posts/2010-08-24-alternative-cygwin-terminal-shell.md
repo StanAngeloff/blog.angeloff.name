@@ -8,7 +8,7 @@ I just realised many, if not most, Cygwin users stick with their default termina
 
 ## Terminal
 
-If you have used PuTTY to connect to remote machines, you would love [**MinTTY**](code.google.com/p/mintty/). It is based on code from PuTTY 0.60. Features as seen on the project's homepage include:
+If you have used PuTTY to connect to remote machines, you would love [**MinTTY**](http://code.google.com/p/mintty/). It is based on code from PuTTY 0.60. Features as seen on the project's homepage include:
 
   * Native Windows user interface that tries to keep things simple.
   * Support for UTF-8, CJK fonts, and Windows IMEs.
