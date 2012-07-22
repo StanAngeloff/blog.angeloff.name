@@ -18,6 +18,8 @@ html {
   @include vertical-scroll-visible;
 }
 
+h1, h2, h3, h4, h5, h6 { line-height: ($base-line-height / $base-font-size) * 100%; }
+
 small { color: theme(text, light); }
 
 $code-background:   theme(code background);
@@ -56,6 +58,8 @@ blockquote {
 
 #page {
   @include container;
+  border-top: rhythm(0.125) solid theme(page, darkest);
+  border-bottom: rhythm(0.25) solid theme(page, darkest);
   padding-bottom: rhythm();
 
   & > header aside {
