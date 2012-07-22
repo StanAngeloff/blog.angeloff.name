@@ -1,0 +1,21 @@
+---
+---
+
+<?xml encoding="utf-8" version="1.0"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.base | xml_escape }}</loc>
+    <changefreq>hourly</changefreq>
+{% for post in site.posts %}
+  {% if forloop.index == 1 %}
+    <lastmod>{{ post.date | date_to_xmlschema | xml_escape }}</lastmod>
+  {% endif %}
+{% endfor %}
+  </url>
+{% for post in site.posts %}
+  <url>
+    <loc>{{ site.base | xml_escape }}{{ post.url | xml_escape }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema | xml_escape }}</lastmod>
+  </url>
+{% endfor %}
+</urlset>
