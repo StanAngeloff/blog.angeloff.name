@@ -117,3 +117,11 @@ a {
 
   .gist-meta { background-color: transparent; }
 }
+
+// - Disqus ------------------------------------------------------------------
+
+#disqus_thread {
+  @include leader;
+  @include trailer;
+  font-family: $base-font-family;
+}
