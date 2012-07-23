@@ -23,6 +23,7 @@ redcarpet:
     "hard_wrap",
     "lax_htmlblock",
     "no_intraemphasis",
+    "smart",
     "space_header",
     "strikethrough",
     "tables"
