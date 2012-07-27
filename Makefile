@@ -22,7 +22,7 @@ compile-default-styles:
 compile: compile-default-styles
 
 compass-command:
-	@( cd '$(STYLES_PATH)' && compass $(ARGS) )
+	@( cd '$(STYLES_PATH)' && '$(CURDIR)/bin/compass' $(ARGS) )
 
 install-ruby-gem-bundle:
 	@echo -n 'Installing RubyGem dependencies... '
