@@ -15,6 +15,10 @@ include:    [
   "rss.xml",
   "sitemap.xml"
 ]
+exclude: [
+  "bin",
+  "vendor"
+]
 
 redcarpet:
   extensions: [
