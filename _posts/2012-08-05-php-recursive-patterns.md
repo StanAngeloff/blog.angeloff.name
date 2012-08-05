@@ -4,7 +4,7 @@ date:   2012-08-05 13:30:00
 layout: default
 ---
 
-_**tl;dr;** This post deals with writing very simple parsers for nested data using recursive regular expression._
+_**tl;dr;** This post deals with writing very simple parsers for nested data using recursive regular expressions._
 
 There is a very good reason why regular expressions are called that -- they are regular. You can get a lot done with them, but if your data has a complex structure, you'd often be advised to use a parser.
 A good example is processing data where parentheses can be nested. A simple regular expression:
@@ -30,7 +30,7 @@ var_export($groups);
 # )
 {%endhighlight%}
 
-[PCRE][PCRE] (the regular expression engine behind [`preg_*` functions][preg functions]) has support for dealing with those cases where you need to recurse and repeat the pattern.
+[PCRE][PCRE] (the regular expressions engine behind [`preg_*` functions][preg functions]) has support for dealing with those cases where you need to recurse and repeat the pattern.
 For example, a very simple CSS parser would need to balance opening `{` and closing `}`, i.e., taking into account `@media` queries also enclosed by a `{..}` pair. Let's assume this document:
 
 {%highlight css%}
@@ -51,7 +51,7 @@ array (
 )
 {%endhighlight%}
 
-To deal with balanced pairs, we need a way to descend into a pair and repeat the pattern. In pseudo Basic-like regular expression code this would mean:
+To deal with balanced pairs, we need a way to descend into a pair and repeat the pattern. In pseudo Basic-like regular expressions code this would mean:
 
 ```
 10: expect an opening '{'
