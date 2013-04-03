@@ -7,7 +7,7 @@ default:
 	@exit 1
 
 start-jekyll-server:
-	@bin/jekyll --auto --server
+	@bin/jekyll --auto --server --pygments --no-lsi --safe
 
 start: start-jekyll-server
 
