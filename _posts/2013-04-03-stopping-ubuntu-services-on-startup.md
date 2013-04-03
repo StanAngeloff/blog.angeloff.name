@@ -17,13 +17,13 @@ I came up with a combined script which deals with both SysV-style scripts as wel
 
 My results were more than impressive. On a system with an [SSD][ssd] disk my boot times improved noticeably which was unexpected. I had some of the most common packages for a developer installed so I used:
 
-```shell
+```
 $ service-disable.sh apache2 lxc lxc-net memcached mongod mongodb mysql palm-novacomd postfix postgresql qemu-kvm
 ```
 
 To find out what services you have on your system, use the following command:
 
-```shell
+```
 $ sudo find /etc/init /etc/init.d \! -iname '*.override' \! -name '.*' | \
   xargs -l basename | \
   sed -e 's/\.conf$//' | \
