@@ -11,6 +11,7 @@ pygments:   true
 permalink:  /post/:categories/:year/:month/:day/:title/
 markdown:   redcarpet
 include:    [
+  "keybase.txt",
   "robots.txt",
   "rss.xml",
   "sitemap.xml"
