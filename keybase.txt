@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/stanangeloff
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://blog.angeloff.name
+  * I am stanangeloff (https://keybase.io/stanangeloff) on keybase.
+  * I have a public key with fingerprint 6E24 CA2D 687B 7A61 7F6C  1282 00C4 4212 595E A753
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.3.2"
+        },
+        "key": {
+            "fingerprint": "6e24ca2d687b7a617f6c128200c44212595ea753",
+            "host": "keybase.io",
+            "key_id": "00C44212595EA753",
+            "uid": "07695674bd05d8383ed7a8c57c184200",
+            "username": "stanangeloff"
+        },
+        "merkle_root": {
+            "ctime": 1400143123,
+            "hash": "b6e2a0319d1226e48d60f6d2b67041543b74ba43e601302a4775ff02fd7789c13aa5a011beb5032b9b0d44a56838bccd7e142a060f268a2a9edc6a53c164115d",
+            "seqno": 8438
+        },
+        "service": {
+            "hostname": "blog.angeloff.name",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1400143238,
+    "expire_in": 157680000,
+    "prev": "0329e657c7b14a26df272a11f4c7d5801946f4d93ca89f4d0bf569ca92314a31",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFVUntQFVUYB8QHNhqGkH+A0NJQGt72nD37IsdH2vBqMMHJQaPb2d2z3NXLXdy7
+gkC3kfIxSqglJD0QU4TCQotkoEFDoCRsGDMfwRCGhOUgphVSOkq7ClOev87j9/0e
+33d2TZvgF+BfV/RVbtSm4iz/U1ckvzTTt6WAknQlj4oroGS3RjymvfPgLELFUWtJ
+noS9xKHpUR5dIY413qgxTCyVQwyvpnssFO1gHJDyxdpwu1jVPJnEyDY0m4viCEQy
+hgon8BKPOcCrnAygAGlaRggCyIoswTzLWJQu3Ws+oErd43Rqiq1CLxnHP7f4Pn79
+/QeeE1mOR5JCs4rACAxReCzILC8DAVkyNtBLjLFIXhN7sOXPrauq7TmLGGvdxGno
++r3gsqnZMIBoGiAGQMZyhb0uq1CygmCaAaICIOQIEhSOVjkFShxPI8AiRrIsYMQQ
+jgYMDTHieVZVaagqPC+IMmAwZjENgEQklmagJEq0ghBmOcuyJMsKTwCyBCxSyAkY
+YpEoModZRgYcAoBVrBhess6jU3ECYgSffTJyNJnYru3GjeWT3HqmYzyg495lLJVt
+6KYu627r3WWa2XF2cDMv+6hdkEsk5xiVU9I8ijW8/08XWNAHmwIZIZYiG7I1gzg1
+G8HynEBby9YhOfZEGCgSzhoALwGEIaeokIcYABXJvMIKNBARpyJFZGQsiNaGllSW
+E2UsQsbCM+C/qFb7TZxpj03L9GBzvUEo37aA8EA//wC/SRMD7O/rNzUoePxPf3cx
+2K/w46OVLYMHBq6yh69MLF/FTGI6Ju88tDAs+Mbg/pe8q4s63xptjmk4eH0PNVIx
+tLM3/NiPW8W6XC+Togaoy5ZklF18xL/Lma8/09XZE+Run3W29r3wHXdLtePqbJSz
+LePVdxJL8goOlPqWOtmAQbH5t4yZp//p2VLVWuZ/Pv2PFSurKgpqBuTo7lWsdrKv
+fzNaevpcWcf2S419pbs9lSdu9ty5/cHUS3zKl7+O9Dbcrdvd2bDgyrE0uT+pfcpf
+8WqP2jRTCXfvbVr+5PSwTMoVkYaajYcnj1Dk8rQjfbOHlz1Fb6wbuSRuvvPE0Opp
+YZ+kROcVVvFtu4z42dq+4r9bLphDqa2uUuPrtj3PJyVVBiZ3X55ewiYFwhs5MKR3
+/tmu9Q69ecq85cdTt24fTGqKbYtOKnn5eupA5/6cuZ/Pj6mumbHtl/lnFlVHlp99
+o3VlulQx681T9YHxMxqv1S/MX35UuboldEL8rtHfb732xaZS15LukB2Jvq4jtb7H
+1lx3tY0Og2sZ5+NdLdcWb3j/5LcvfNh/e/+ZDX+ODsyJTBgu30m7uz59Za/JPp2y
+aU7D2x/F/FBUMzf1wnD6Q8EJoSnVi/atTgjJr4gtO7L0xaKR4hXrcjdurT7UsaDx
+m3M/wZ/Fd4tj8OH4m072YFDlUOHjEYkR7f6htfWP3np25srv25LRZ5Enyue9fj5Z
+k9OK/wU=
+=qnRp
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/stanangeloff
+
+==================================================================

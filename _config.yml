@@ -1,7 +1,7 @@
 markdown:         kramdown
 highlighter:      pygments
 
-permalink:        pretty
+permalink:        /post/:categories/:year/:month/:day/:title/
 
 title:            'tmpfs /home/stan'
 description:      'Stan Angeloff’s blog, a collection of thoughts, rants & research'
@@ -30,6 +30,11 @@ exclude:
   - Gemfile.lock
   - LICENSE.md
   - README.md
+
+include:
+  - favicon.ico
+  - keybase.txt
+  - robots.txt
 
 github:
   user:           StanAngeloff
