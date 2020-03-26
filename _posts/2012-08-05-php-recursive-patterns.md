@@ -1,7 +1,7 @@
 ---
 title:  PHP Recursive Patterns
 date:   2012-08-05 13:30:00
-layout: default
+layout: post
 ---
 
 _**tl;dr;** This post deals with writing very simple parsers for nested data using recursive regular expressions._

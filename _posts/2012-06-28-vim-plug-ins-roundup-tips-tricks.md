@@ -1,7 +1,7 @@
 ---
 title:  Vim plug-ins roundup, tips & tricks
 date:   2012-06-28 23:30:00
-layout: default
+layout: post
 ---
 
 I am fairly new to Vim. [When I switched editors][switch] and moved to Vim completely (about an year ago), I looked around for plug-ins and scripts other Users were using. I knew I was going to improve my text editing speed just by using the core editor itself, however I was more keen on setting up my very own personal environment.

@@ -1,7 +1,7 @@
 ---
 title:  Failed to load module "globalmenu-gtk" after uninstalling gnome-shell
 date:   2012-02-06 17:53:00
-layout: default
+layout: post
 ---
 
 If you get:

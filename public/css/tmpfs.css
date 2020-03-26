@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600&display=swap&subset=cyrillic');
+
+:root {
+  --hue: 180;
+}
+
+html,
+.pagination {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Cantarell, Ubuntu, 'Helvetica Neue', 'Trebuchet MS', sans-serif; sans-serif;
+}
+
+code,
+pre,
+.gist .gist-file {
+  font-family: Input, Menlo, Monaco, 'Liberation Mono', Consolas, Inconsolata, 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', 'andale mono', 'lucida console', monospace;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong, b {
+  font-weight: 600;
+}
+
+h1, h1 a,
+h2, h2 a,
+h3, h3 a,
+h4, h4 a,
+h5, h5 a,
+h6, h6 a,
+.page-title, .page-title a,
+.post-title, .post-title a {
+  color: hsla(var(--hue), 100%, 10%, 1);
+}
+
+.sidebar {
+  background-color: hsla(var(--hue), 70%, 20%, 1);
+}
+
+.sidebar-about a {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.sidebar-nav-item svg {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.sidebar-about .lead {
+  color: hsla(var(--hue), 70%, 80%, .8);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.sidebar small {
+  color: hsla(var(--hue), 70%, 80%, .5);
+  display: block;
+  font-size: .8rem;
+  line-height: 1.2;
+}
+
+a {
+  color: hsla(var(--hue), 100%, 20%, 1);
+}
+
+.post a,
+.page a {
+  text-decoration: underline;
+}
+
+.post .post-title a:not(:hover),
+.page .page-title a:not(:hover) {
+  text-decoration: none;
+}

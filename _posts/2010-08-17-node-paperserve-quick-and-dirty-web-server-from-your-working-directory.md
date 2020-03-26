@@ -1,7 +1,7 @@
 ---
 title:  node-paperserve - Quick and dirty web server from your working directory
 date:   2010-08-17 14:57:00
-layout: default
+layout: post
 ---
 
 **Install**

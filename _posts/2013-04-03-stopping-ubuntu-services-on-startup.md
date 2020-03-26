@@ -1,7 +1,7 @@
 ---
 title:  Stopping Ubuntu services on startup
 date:   2013-04-03 20:20:00
-layout: default
+layout: post
 ---
 
 I have been using Ubuntu since 10.04. I am running 13.04 at present and have undergone numerous distribution upgrades and not a single re-install. As a result, there is quite a lot of cruft accumulated by now. By cruft I mean packages I have had to install in order to complete a particular task and never got around to cleaning them up afterwards. For some odd reason, I still keep the projects that depend on them around so uninstalling is not an option.

@@ -1,7 +1,7 @@
 ---
 title:  Yoke - a drop-in, quick and dirty alternative to Sprockets
 date:   2011-02-23 18:02:00
-layout: default
+layout: post
 ---
 
 In local development, I tend to create separate pieces of JavaScript for every controller, model, view, etc. I loved the idea of Sprockets -- grab all these files and stitch them together. While it worked well for a while (on the command-line), I got fed up with how slow it runs, especially on Ruby under Cygwin.  

@@ -1,7 +1,7 @@
 ---
 title:  Compass Magick Tutorial - Part 1
 date:   2011-04-16 17:47:00
-layout: default
+layout: post
 ---
 
 Introduction

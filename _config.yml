@@ -1,5 +1,4 @@
 markdown:         kramdown
-highlighter:      pygments
 
 permalink:        /post/:categories/:year/:month/:day/:title/
 
@@ -12,7 +11,7 @@ author:
   name:           'Stan Angeloff'
   url:            http://blog.angeloff.name
 
-paginate:         10
+paginate:         5
 paginate_path:    '/page,:num/'
 
 excerpt_separator: '<!-- excerpt -->'

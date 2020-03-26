@@ -1,7 +1,7 @@
 ---
 title:  Quick tab switching in Vim
 date:   2012-07-23 12:00:00
-layout: default
+layout: post
 ---
 
 This is so simple, it doesn't even deserve an explanation:

@@ -1,7 +1,7 @@
 ---
 title:  'Day 0: Flame Unboxing'
 date:   2014-08-25 20:30:00
-layout: default
+layout: post
 ---
 
 ### The Experiment

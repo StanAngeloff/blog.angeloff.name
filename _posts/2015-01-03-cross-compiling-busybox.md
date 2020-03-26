@@ -1,7 +1,7 @@
 ---
 title:  'Cross-compiling BusyBox to run on the Intel Atom Z3745 inside an ASUS MeMO Pad (ME176C)'
 date:   2015-01-03 13:30:00
-layout: default
+layout: post
 ---
 
 I recently acquired the very inexpensive [ASUS MeMO Pad (ME176C)][ME176C]. It's a [surprisingly great device][the-verge] with an excellent screen and, best of all, a powerful [Intel Atom Z3745][Z3745] inside. The tablet comes with Android 4.4 (KitKat), however I want to run Ubuntu LTS from a `chroot`. I soon discovered I needed to compile BusyBox from source in order to achieve this.

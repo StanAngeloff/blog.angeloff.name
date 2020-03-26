@@ -1,7 +1,7 @@
 ---
 title:  Diff'ing images in Git
 date:   2012-02-01 23:32:00
-layout: default
+layout: post
 ---
 
 I use Git on the command-line usually, but lately I'm using more and more of [git-cola](http://cola.tuxfamily.org/). It's compact, keyboard-friendly, regularly updated, features a clean UI with main focus on staging and diffs. It was while working in git-cola merging over 100+ files from two different branches that I discovered quite a few overlapping image files. The diff panel was useless and it's not like I can rely on the command-line for non-textual diffs. Did what every developer does nowadays when faced with an issue, I googled *side-by-side diffs*, *git diff images* and any other combination of words and phrases I could come up. There wasn't much, if anything, useful that came up in the results so I got to work.

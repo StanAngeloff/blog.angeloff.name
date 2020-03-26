@@ -1,7 +1,7 @@
 ---
 title:  Epic keyboard layout change mode in Ubuntu
 date:   2013-06-26 08:55:00
-layout: default
+layout: post
 ---
 
 How often do you use your `Caps Lock` key? I've had it remapped to act as another `Ctrl` for years, but never actually used it as such. So how about using it for something useful, like keyboard layout switching (e.g., US <-> Bulgarian)?

@@ -1,7 +1,7 @@
 ---
 title:  Ubuntu 12.04 (Precise) & PHP 5.2.x
 date:   2012-06-18 14:12:00
-layout: default
+layout: post
 ---
 
 If you get lots of:

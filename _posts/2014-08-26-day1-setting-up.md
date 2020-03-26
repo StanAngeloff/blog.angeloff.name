@@ -1,7 +1,7 @@
 ---
 title:  'Day 1: Setting Up (Firefox OS series)'
 date:   2014-08-26 20:30:00
-layout: default
+layout: post
 ---
 
 ### The Experiment

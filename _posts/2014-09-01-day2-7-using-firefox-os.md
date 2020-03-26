@@ -1,7 +1,7 @@
 ---
 title:  'Day 2-7: Using Firefox OS'
 date:   2014-09-01 20:30:00
-layout: default
+layout: post
 ---
 
 ### The Experiment

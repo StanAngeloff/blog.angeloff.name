@@ -1,7 +1,7 @@
 ---
 title:  Vim, regular expressions and negative lookahead
 date:   2012-08-05 13:15:00
-layout: default
+layout: post
 ---
 
 One of Vim's biggest strengths IMHO is it's quick access to the search and [extended support for regular expressions][pattern-multi-items]. It can be very frustrating at first as the syntax for the latter doesn't follow Perl or anything else I have used (`grep`, etc.), but once you learn more about it, you'll start to appreciate it.

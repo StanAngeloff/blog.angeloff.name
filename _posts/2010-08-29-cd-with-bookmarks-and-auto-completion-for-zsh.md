@@ -1,7 +1,7 @@
 ---
 title:  cd with bookmarks and auto-completion for Zsh
 date:   2010-08-29 12:00:00
-layout: default
+layout: post
 ---
 
 If you are like me, you do a lot of terminal work and `cd` is your friend (or enemy). I was getting really tired to `cd /home/stan/projects/important-project/src/` every time I launch my shell. It's bad enough when you have one project to work on, but as things get scattered, you tend to do more directory traversing than actual coding.

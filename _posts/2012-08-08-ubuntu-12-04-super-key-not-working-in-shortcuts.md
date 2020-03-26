@@ -1,7 +1,7 @@
 ---
 title:  Ubuntu 12.04 - Super key not working in shortcuts
 date:   2012-08-08 12:00:00
-layout: default
+layout: post
 ---
 
 If you are running the latest Ubuntu this Summer and are trying to configure your keyboard shortcuts to use the `Super` key, you may be out of luck.

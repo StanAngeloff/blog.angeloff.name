@@ -1,7 +1,7 @@
 ---
 title:  'Day X: Giving up on Firefox OS'
 date:   2014-10-07 19:45:00
-layout: default
+layout: post
 ---
 
 ### The Experiment
