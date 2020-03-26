@@ -4,12 +4,12 @@ permalink:        /post/:categories/:year/:month/:day/:title/
 
 title:            'tmpfs /home/stan'
 description:      'Stan Angeloff’s blog, a collection of thoughts, rants & research'
-url:              http://blog.angeloff.name
+url:              https://blog.angeloff.name
 baseurl:          ''
 
 author:
   name:           'Stan Angeloff'
-  url:            http://blog.angeloff.name
+  url:            https://blog.angeloff.name
 
 paginate:         5
 paginate_path:    '/page,:num/'
