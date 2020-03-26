@@ -1,1 +1,1 @@
-# [blog.angeloff.name](http://blog.angeloff.name)
+# [blog.angeloff.name](https://blog.angeloff.name)
