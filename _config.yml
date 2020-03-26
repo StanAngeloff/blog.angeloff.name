@@ -1,26 +1,39 @@
-# Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 
-# Permalinks
 permalink:        pretty
-relative_permalinks: true
 
-# Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+title:            'tmpfs /home/stan'
+description:      'Stan Angeloff’s blog, a collection of thoughts, rants & research'
+url:              http://blog.angeloff.name
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Stan Angeloff'
+  url:            http://blog.angeloff.name
 
-paginate:         5
+paginate:         10
+paginate_path:    '/page,:num/'
 
-# Custom vars
-version:          2.1.0
+excerpt_separator: '<!-- excerpt -->'
+
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
 
 github:
-  repo:           https://github.com/poole/hyde
+  user:           StanAngeloff
+
+twitter:
+  username:       StanAngeloff
+  card:           summary
