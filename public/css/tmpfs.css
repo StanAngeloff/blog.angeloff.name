@@ -71,3 +71,19 @@ a {
 .page .page-title a:not(:hover) {
   text-decoration: none;
 }
+
+@media (min-width: 100rem) {
+  .page > aside,
+  .post > aside {
+    position: absolute;
+    left: 63rem;
+    right: 1rem;
+    max-width: 20rem;
+  }
+}
+
+.page > aside > img,
+.post > aside > img {
+  max-width: 100%;
+  height: auto;
+}
