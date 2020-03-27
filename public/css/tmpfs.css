@@ -28,7 +28,7 @@ h5, h5 a,
 h6, h6 a,
 .page-title, .page-title a,
 .post-title, .post-title a {
-  color: hsla(var(--hue), 100%, 10%, 1);
+  color: hsla(var(--hue), 10%, 20%, 1);
 }
 
 .sidebar {
