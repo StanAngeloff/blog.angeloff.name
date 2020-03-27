@@ -20,6 +20,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - .editorconfig
