@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:600&display=swap&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600&display=swap&subset=cyrillic');
 
 :root {
@@ -29,6 +30,7 @@ h6, h6 a,
 .page-title, .page-title a,
 .post-title, .post-title a {
   color: hsla(var(--hue), 10%, 20%, 1);
+  font-family: 'Source Serif Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Cantarell, Ubuntu, 'Helvetica Neue', 'Trebuchet MS', sans-serif; sans-serif;
 }
 
 .sidebar {
