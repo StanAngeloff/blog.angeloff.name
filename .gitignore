@@ -13,6 +13,8 @@ node_modules/
 *.vi
 *~
 
+.direnv/
+
 .DS_Store
 ._*
 Thumbs.db

@@ -4,12 +4,18 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "fmt": "treefmt",
+    "fmt:check": "treefmt --fail-on-change"
   },
   "dependencies": {
-    "astro": "^6.2.0",
-    "@astrojs/sitemap": "^3.7.0",
     "@astrojs/mdx": "^4.3.0",
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^6.2.0",
     "marked": "^17.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
