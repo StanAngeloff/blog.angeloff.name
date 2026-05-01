@@ -1,6 +1,6 @@
 ---
-title:  PHP Recursive Patterns
-date:   2012-08-05 13:30:00
+title: PHP Recursive Patterns
+date: 2012-08-05 13:30:00
 ---
 
 _**tl;dr;** This post deals with writing very simple parsers for nested data using recursive regular expressions._
@@ -13,7 +13,6 @@ A good example is processing data where parentheses can be nested. A simple regu
 ```
 
 fails quickly when a nested `(` `)` pair is encountered.
-
 
 ```php
 <?php
@@ -33,11 +32,19 @@ var_export($groups);
 For example, a very simple CSS parser would need to balance opening `{` and closing `}`, i.e., taking into account `@media` queries also enclosed by a `{..}` pair. Let's assume this document:
 
 ```css
-body { color: #888; }
+body {
+  color: #888;
+}
 
-@media print { body { color: #333; } }
+@media print {
+  body {
+    color: #333;
+  }
+}
 
-code { color: blue; }
+code {
+  color: blue;
+}
 ```
 
 A non-[greedy][greedy] regular expression like `/{.*?}/` would fail as it exits as soon as a closing `}` is encountered resulting in the following captured groups:
@@ -130,9 +137,8 @@ $pattern = '/(?:@media[^{]+)?'     # @media is optional, e.g., when we have desc
 Parsers can be much more complex than a one-line regular expression. You'd most likely also need to include a dependency in your project.
 If all you need is a simple solution then I say try and use recursive regular expressions first. I have been hacking on a tool to [merge `@media` queries][gist] produced by Sass and I got the job done with no complex parsers or dependencies involved.
 
-
-  [PCRE]:           http://www.pcre.org/
-  [preg functions]: http://www.php.net/manual/en/ref.pcre.php
-  [greedy]:         http://www.regular-expressions.info/repeat.html#greedy
-  [PCRE recursive]: http://php.net/manual/en/regexp.reference.recursive.php
-  [gist]:           https://gist.github.com/3164569
+[PCRE]: http://www.pcre.org/
+[preg functions]: http://www.php.net/manual/en/ref.pcre.php
+[greedy]: http://www.regular-expressions.info/repeat.html#greedy
+[PCRE recursive]: http://php.net/manual/en/regexp.reference.recursive.php
+[gist]: https://gist.github.com/3164569

@@ -1,29 +1,37 @@
 ---
-title:  Styling XUL applications like web pages
-date:   2010-08-13 13:10:00
+title: Styling XUL applications like web pages
+date: 2010-08-13 13:10:00
 ---
 
 If you don't know of XUL applications there are [many out there](http://www.mozilla.org/projects/mozilla-based.html) in the wild. You are probably using a Mozilla XUL-based app without even realising it.
 
-I am a [Komodo Edit](http://www.activestate.com/komodo-edit) user myself  and I love the platform. I have posted [several](http://community.activestate.com/xpi/html-toolkit) [extensions](http://community.activestate.com/xpi/aero-theme) if my words are not enough to prove it.
+I am a [Komodo Edit](http://www.activestate.com/komodo-edit) user myself and I love the platform. I have posted [several](http://community.activestate.com/xpi/html-toolkit) [extensions](http://community.activestate.com/xpi/aero-theme) if my words are not enough to prove it.
 
 The greatest weakness of XUL apps in my book is how **static** they feel. They are not as dynamic and rich as HTML documents and as a result development is usually not as easy and elegant. You are forced to restart the application between updates or rely on hacky methods to reload it while running. Being frustrated with these facts, I decided to do something about it. It would be wonderful if you could just press `Ctrl+Alt+R` and have a fresh stylesheet loaded into your application -- much like existing solutions for [Google Chrome](https://chrome.google.com/extensions/detail/ojcnooebgeenefpfngjfifjcnhlkbbdd) of [Firefox](https://addons.mozilla.org/en-US/firefox/addon/7465/). Here is one way you can do just this in Komodo:
 
 ```javascript
-(function() {
-
-for (var child, i = 0, length = document.childNodes.length; i < length && (child = document.childNodes[i]); i ++) {
+(function () {
+  for (
+    var child, i = 0, length = document.childNodes.length;
+    i < length && (child = document.childNodes[i]);
+    i++
+  ) {
     if (child.nodeType === 7) {
-        if (child.nodeValue.indexOf('aero') > 0) {  /* UPDATE: 'aero' with a keyword from your file name */
-            child.nodeValue = 'discard="discard"';
-            document.removeChild(child);
-        }
+      if (child.nodeValue.indexOf("aero") > 0) {
+        /* UPDATE: 'aero' with a keyword from your file name */
+        child.nodeValue = 'discard="discard"';
+        document.removeChild(child);
+      }
     }
-}
+  }
 
-var pi = document.createProcessingInstruction('xml-stylesheet', 'href="file:///D:/Workspace/public/komodo-aero-theme/src/skin/aero/theme.css?' + (new Date().getTime()) + '" type="text/css"');  /* UPDATE: with path to a local resource; keep new Date()... */
-document.insertBefore(pi, document.firstChild);
-
+  var pi = document.createProcessingInstruction(
+    "xml-stylesheet",
+    'href="file:///D:/Workspace/public/komodo-aero-theme/src/skin/aero/theme.css?' +
+      new Date().getTime() +
+      '" type="text/css"',
+  ); /* UPDATE: with path to a local resource; keep new Date()... */
+  document.insertBefore(pi, document.firstChild);
 })();
 ```
 

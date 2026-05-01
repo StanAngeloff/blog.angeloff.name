@@ -1,21 +1,36 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const allPosts = await getCollection('posts');
-const sorted = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const allPosts = await getCollection("posts");
+const sorted = allPosts.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
 
-function postUrl(post: typeof sorted[0]) {
+function postUrl(post: (typeof sorted)[0]) {
   const date = post.data.date;
   const y = String(date.getUTCFullYear());
-  const m = String(date.getUTCMonth() + 1).padStart(2, '0');
-  const d = String(date.getUTCDate()).padStart(2, '0');
+  const m = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const d = String(date.getUTCDate()).padStart(2, "0");
   return `/post/${y}/${m}/${d}/${post.id.slice(11)}/`;
 }
 
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
-type PostEntry = typeof sorted[0];
+type PostEntry = (typeof sorted)[0];
 const byYear = new Map<number, Map<number, PostEntry[]>>();
 for (const post of sorted) {
   const y = post.data.date.getUTCFullYear();
@@ -28,26 +43,31 @@ for (const post of sorted) {
 ---
 
 <BaseLayout>
-  {[...byYear.entries()].map(([year, monthMap]) => (
-    <section>
-      <h2>{year}</h2>
-      {[...monthMap.entries()].map(([month, posts]) => (
-        <div>
-          <h3>{months[month]}</h3>
-          <ul>
-            {posts.map((post) => (
-              <li>
-                <a href={postUrl(post)}>{post.data.title}</a>
-                <small>
-                  <time datetime={post.data.date.toISOString()}>
-                    {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                  </time>
-                </small>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </section>
-  ))}
+  {
+    [...byYear.entries()].map(([year, monthMap]) => (
+      <section>
+        <h2>{year}</h2>
+        {[...monthMap.entries()].map(([month, posts]) => (
+          <div>
+            <h3>{months[month]}</h3>
+            <ul>
+              {posts.map((post) => (
+                <li>
+                  <a href={postUrl(post)}>{post.data.title}</a>
+                  <small>
+                    <time datetime={post.data.date.toISOString()}>
+                      {post.data.date.toLocaleDateString("en-US", {
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                  </small>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    ))
+  }
 </BaseLayout>

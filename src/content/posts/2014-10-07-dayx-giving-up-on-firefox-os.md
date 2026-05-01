@@ -1,13 +1,13 @@
 ---
-title:  'Day X: Giving up on Firefox OS'
-date:   2014-10-07 19:45:00
+title: "Day X: Giving up on Firefox OS"
+date: 2014-10-07 19:45:00
 ---
 
 ### The Experiment
 
 I recently decided to give Firefox OS a try and ordered a [Flame][flame] developer reference phone. This will be an attempt at a blog series capturing my first 30 days of usage. I will do my best to blog as frequently as I can, usually once or twice a week as I get more accustomed to the new platform.
 
-  [flame]: https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide/Flame
+[flame]: https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide/Flame
 
 ### The Experience (or lack thereof)
 
@@ -29,7 +29,7 @@ The list goes on and the above is just a fraction of the really frustrating ones
 
 <small>[1] I get that nightlies are meant for testing, however introducing unfinished changes seems like a bad practise. Firefox recently introduced [Electrolysis], a big change _to run web content in a separate process from Firefox itself_. This was turned off by default and is a good model to follow &ndash; if an update is unfinished or breaks things, hide it behind a flag.</small>
 
-  [Electrolysis]: https://wiki.mozilla.org/Electrolysis
+[Electrolysis]: https://wiki.mozilla.org/Electrolysis
 
 #### Battery
 

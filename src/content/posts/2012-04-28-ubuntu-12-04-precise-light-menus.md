@@ -1,6 +1,6 @@
 ---
-title:  Ubuntu 12.04 (Precise) light menus
-date:   2012-04-28 16:55:00
+title: Ubuntu 12.04 (Precise) light menus
+date: 2012-04-28 16:55:00
 ---
 
 The design team at Canonical has decided to refresh the default theme in Ubuntu for its LTS release to feature light menus from light sources and dark menus from dark sources.

@@ -1,10 +1,9 @@
 ---
-title:  Compass Magick Tutorial - Part 1
-date:   2011-04-16 17:47:00
+title: Compass Magick Tutorial - Part 1
+date: 2011-04-16 17:47:00
 ---
 
-Introduction
-------------
+## Introduction
 
 We have all been there - you release a cool new website with all the goodies of CSS3 just to find several weeks later your Customer wants you to support Internet Explorer as well. It seems solid backgrounds don't cut it.
 
@@ -14,8 +13,7 @@ Compass Magick tries to solve these issues by allowing you to dynamically genera
 
 <!-- more -->
 
-History
--------
+## History
 
 The initial version of the project relied on RMagick for all image manipulation. There were many quirks: gradients were not working properly, per-pixel manipulation was difficult and much more.
 While I haven't worked with Ruby myself before, it also became apparent after some time RMagick was a big no-no in Ruby's land. The project is not actively maintained (last commit at the time of writing this post was on October 25, 2010) and compiling it is a big pain (especially on Windows/Cygwin).
@@ -23,8 +21,7 @@ While I haven't worked with Ruby myself before, it also became apparent after so
 Searching for an alternative solution, I stumbled upon [compass-rgba](http://www.aaronrussell.co.uk/blog/cross-browser-rgba-support/), a simple plugin for generating 1x1 images and saving them as PNG files, the goal being to support IE7 with its missing implementation for `rgba`.
 The plugin is using [ChunkyPNG](https://github.com/wvanbergen/chunky_png), a pure Ruby library for reading and writing PNG images. Upon further investigation, I found it has very good support for per-pixel access and was a breeze to install. The author, Willem van Bergen, is also actively maintaining it, constantly adding new features and releasing new versions.
 
-Installation
-------------
+## Installation
 
 Moving away from the brief history lesson, installing Compass Magick is simple via RubyGems. [Compass](http://beta.compass-style.org) ~> 0.11.beta.5 and [ChunkyPNG](https://github.com/wvanbergen/chunky_png) ~> 1.1.0 are required.
 
@@ -45,8 +42,7 @@ If you are starting a new Compass project, to include Magick add `-r magick` to 
 
     compass create -r magick my_project
 
-A Surface
----------
+## A Surface
 
 Everything starts with a canvas:
 
@@ -71,8 +67,7 @@ body {
 }
 ```
 
-Commands
---------
+## Commands
 
 You can perform drawing operations on a Magick canvas just like any other canvas. Commands are executed in the order they are specified in the source file. There are commands for drawing borders, generating gradients and much more. To keep things simple, let's turn our transparent canvas yellow:
 
@@ -109,8 +104,7 @@ What happened there? We created a 320x200 canvas and executed two commands on it
 1. Fill the entire canvas with `$theme1` (yellow)
 2. Fill the entire canvas again with `$theme2` (blue), but at 50% opacity
 
-Types
------
+## Types
 
 Compass Magick has support for linear gradients. Gradients are not drawing functions, but fill types. You don't apply a gradient directly on the canvas, rather you use it as an argument to a drawing function, one like `magick-fill` for example. Let's create a very simple top-to-bottom gradient and apply it on our canvas from the previous examples:
 
@@ -133,8 +127,7 @@ body {
 
 ![Example 3](/assets/images/imgur/V9pb3.png)
 
-Going Further
--------------
+## Going Further
 
 Compass Magick has a very powerful [set of functions](https://github.com/StanAngeloff/compass-magick/blob/master/APIs.md). Adding corners and a border is trivial and we can quickly turn our canvas into a button:
 
@@ -162,8 +155,7 @@ body {
 
 ![Example 4](/assets/images/imgur/hBLg0.png)
 
-Saving the Canvas
------------------
+## Saving the Canvas
 
 Unfortunately Base64 encoded Data URLs are not supported by all browsers and versions. To save the button we generated on disk, we first need to alter our Compass configuration:
 
@@ -187,8 +179,7 @@ body {
 
 The result will be `button.png` in the configured `images_dir`. The file is optimised for best compression, but you could further post-process it with tools like [OptiPNG](http://optipng.sourceforge.net/).
 
-Conclusion
-----------
+## Conclusion
 
 This post is just an introduction to Compass Magick. There are many more features available, some of which include image composing, cropping, masking, drop shadows and pattern generation.
 Check out the [list of all available commands](https://github.com/StanAngeloff/compass-magick/blob/master/APIs.md) for a comprehensive reference.

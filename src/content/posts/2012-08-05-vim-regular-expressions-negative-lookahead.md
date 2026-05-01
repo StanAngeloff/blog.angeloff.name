@@ -1,6 +1,6 @@
 ---
-title:  Vim, regular expressions and negative lookahead
-date:   2012-08-05 13:15:00
+title: Vim, regular expressions and negative lookahead
+date: 2012-08-05 13:15:00
 ---
 
 One of Vim's biggest strengths IMHO is it's quick access to the search and [extended support for regular expressions][pattern-multi-items]. It can be very frustrating at first as the syntax for the latter doesn't follow Perl or anything else I have used (`grep`, etc.), but once you learn more about it, you'll start to appreciate it.
@@ -13,6 +13,6 @@ A feature I recently discovered was [negative lookahead][negative-lookahead]. Th
 
 There are all sorts of goodness in the [Vim documentation on patterns][documentation]. If you are using Vim on a daily basis, it's worth spending a few minutes to learn what's available. Your next search & replace could save you hours of editing or recording and getting a macro just right.
 
-  [pattern-multi-items]: http://vimdoc.sourceforge.net/htmldoc/pattern.html#pattern-multi-items
-  [negative-lookahead]:  http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@!
-  [documentation]:       http://vimdoc.sourceforge.net/htmldoc/pattern.html
+[pattern-multi-items]: http://vimdoc.sourceforge.net/htmldoc/pattern.html#pattern-multi-items
+[negative-lookahead]: http://vimdoc.sourceforge.net/htmldoc/pattern.html#/@!
+[documentation]: http://vimdoc.sourceforge.net/htmldoc/pattern.html

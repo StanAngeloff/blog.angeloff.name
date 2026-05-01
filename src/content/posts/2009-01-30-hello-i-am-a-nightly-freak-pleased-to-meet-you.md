@@ -3,16 +3,17 @@ title: "Hello, I am a 'nightly freak'. Pleased to meet you."
 date: 2009-01-30 01:09:00
 ---
 
-You may never have heard the phrase *'nightly freak'* and there is probably a good reason for it i.e. it just came to me. As a typical Internet user, let's see what Google has to say on it:
+You may never have heard the phrase _'nightly freak'_ and there is probably a good reason for it i.e. it just came to me. As a typical Internet user, let's see what Google has to say on it:
+
 > A nightly build [...] takes place automatically, typically when no one is likely to be working in the office. The results of the build are inspected by the arriving programmers, who generally place a priority on ensuring the [...] build does not break.
-[Wikipedia page on Nightlies](http://en.wikipedia.org/w/index.php?title=Nightlies&redirect=no)
+> [Wikipedia page on Nightlies](http://en.wikipedia.org/w/index.php?title=Nightlies&redirect=no)
 
 While that may be a perfectly good definition, it still fails short to explain what I mean in details. Being a 'nightly freak' for me means running the very latest and greatest version of a program. The reason they are called 'nightly builds' /as suggested in the quote above/ usually has something to do with the fact they are produced at the end of the day, once everyone has left the office.
 
 **What are the benefits** you may ask? Nightlies:
 
 - Usually contain fixes and features not present in the official version,
-- Are *experiments* in a way that they may offer a different approach to a task,
+- Are _experiments_ in a way that they may offer a different approach to a task,
 - Can have much better performance,
 - Are a way for you, the User, to evaluate all of the above and submit feedback.
 

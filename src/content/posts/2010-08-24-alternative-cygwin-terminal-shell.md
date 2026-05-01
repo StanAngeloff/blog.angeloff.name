@@ -1,20 +1,20 @@
 ---
-title:  Alternative Cygwin terminal & shell
-date:   2010-08-24 10:20:00
+title: Alternative Cygwin terminal & shell
+date: 2010-08-24 10:20:00
 ---
 
-I just realised many, if not most, Cygwin users stick with their default terminal which is the *Cygwin Bash Shell*. I never understood why this is the default with each installation. It is no better than *Command Prompt* -- horizontal window resizing is out of the question, custom fonts are limited and mouse support is, well... missing.
+I just realised many, if not most, Cygwin users stick with their default terminal which is the _Cygwin Bash Shell_. I never understood why this is the default with each installation. It is no better than _Command Prompt_ -- horizontal window resizing is out of the question, custom fonts are limited and mouse support is, well... missing.
 
 ## Terminal
 
 If you have used PuTTY to connect to remote machines, you would love [**MinTTY**](http://code.google.com/p/mintty/). It is based on code from PuTTY 0.60. Features as seen on the project's homepage include:
 
-  * Native Windows user interface that tries to keep things simple.
-  * Support for UTF-8, CJK fonts, and Windows IMEs.
-  * Drag & drop and copy & paste of text, files and folders. (Files and folders are inserted as quoted filenames.)
-  * Extensive mouse support, e.g. mousewheel scrolling in less and opening files and URLs with Ctrl+click
-  * Window transparency, including glass effect on Vista and 7.
-  * Small program size and  uick scrolling.
+- Native Windows user interface that tries to keep things simple.
+- Support for UTF-8, CJK fonts, and Windows IMEs.
+- Drag & drop and copy & paste of text, files and folders. (Files and folders are inserted as quoted filenames.)
+- Extensive mouse support, e.g. mousewheel scrolling in less and opening files and URLs with Ctrl+click
+- Window transparency, including glass effect on Vista and 7.
+- Small program size and uick scrolling.
 
 ![MinTTY preview](/assets/images/imgur/EBpvY.png)
 

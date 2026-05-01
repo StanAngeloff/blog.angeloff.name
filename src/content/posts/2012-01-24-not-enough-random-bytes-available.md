@@ -1,6 +1,6 @@
 ---
-title:  Not enough random bytes available.
-date:   2012-01-24 14:38:00
+title: Not enough random bytes available.
+date: 2012-01-24 14:38:00
 ---
 
 ### Please do some other work to give the OS a chance to collect more entropy! (Need more bytes)

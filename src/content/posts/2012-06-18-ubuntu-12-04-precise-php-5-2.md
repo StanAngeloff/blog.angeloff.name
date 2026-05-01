@@ -1,6 +1,6 @@
 ---
-title:  Ubuntu 12.04 (Precise) & PHP 5.2.x
-date:   2012-06-18 14:12:00
+title: Ubuntu 12.04 (Precise) & PHP 5.2.x
+date: 2012-06-18 14:12:00
 ---
 
 If you get lots of:
@@ -24,7 +24,7 @@ $ locate 'libXXX' | grep 'so$'
 
 Which should output the directory where the binary `libXXX` (e.g., `libmysqlclient`) is installed.
 
-----
+---
 
 If you also see this at the linking stage:
 

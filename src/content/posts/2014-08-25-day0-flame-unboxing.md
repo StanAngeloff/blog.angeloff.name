@@ -1,13 +1,13 @@
 ---
-title:  'Day 0: Flame Unboxing'
-date:   2014-08-25 20:30:00
+title: "Day 0: Flame Unboxing"
+date: 2014-08-25 20:30:00
 ---
 
 ### The Experiment
 
 I recently decided to give Firefox OS a try and ordered a [Flame][flame] developer reference phone. This post and the ones following will be an attempt at a blog series capturing my first 30 days of usage. I will do my best to blog as frequently as I can, usually once or twice a week as I get more accustomed to the new platform.
 
-  [flame]: https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide/Flame
+[flame]: https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide/Flame
 
 ### Why a Firefox OS-based device?
 
@@ -39,19 +39,19 @@ If you haven't seen the specs, here's a quote from the announcement:
 
 The Flame phone as ordered from [Everbuying] ships from Singapore (manufactured in China). If you are shipping to a EU member country, your order may be subject to import taxes. Depending on where you live, you may also need to provide proof-of-payment as the supplier will likely declare your order as 'no commercial value' (which is a red flag for customs). Bring your PayPal receipt or wire transfer papers with you.
 
-  [galaxy1]: http://www.gsmarena.com/samsung_i9000_galaxy_s-3115.php
-  [galaxis4mini]: http://www.gsmarena.com/samsung_i9190_galaxy_s4_mini-5375.php
-  [cyanogenmod]: http://www.cyanogenmod.org/
-  [touchpad]: http://en.wikipedia.org/wiki/HP_TouchPad
-  [webos]: http://en.wikipedia.org/wiki/WebOS
-  [announcement]: https://hacks.mozilla.org/2014/05/flame-firefox-os-developer-phone/
-  [Everbuying]: http://www.everbuying.com/product549652.html
+[galaxy1]: http://www.gsmarena.com/samsung_i9000_galaxy_s-3115.php
+[galaxis4mini]: http://www.gsmarena.com/samsung_i9190_galaxy_s4_mini-5375.php
+[cyanogenmod]: http://www.cyanogenmod.org/
+[touchpad]: http://en.wikipedia.org/wiki/HP_TouchPad
+[webos]: http://en.wikipedia.org/wiki/WebOS
+[announcement]: https://hacks.mozilla.org/2014/05/flame-firefox-os-developer-phone/
+[Everbuying]: http://www.everbuying.com/product549652.html
 
 ## Unboxing, please!
 
 Right, let's get on with it, shall we?
 
-----
+---
 
 <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1132.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1132.jpg" alt="The Flame phone box with T2Mobile label at the front" style="max-width: 33%; max-height: 180px;"></a> <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1133.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1133.jpg" alt="The Flame phone box at a slightly different angle" style="max-width: 33%; max-height: 180px;"></a> <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1134.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1134.jpg" alt="The Flame phone box up-close" style="max-width: 33%; max-height: 180px;"></a>
 
@@ -67,31 +67,31 @@ Mystery solved.
 
 The box itself is nothing to marvel at. It's plain, it's simple and the only interesting element to it is the orange screen of the phone illustration. It also feels very light.
 
-----
+---
 
 <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1135.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1135.jpg" alt="The other side of the Flame phone box showing the device specs" style="max-width: 66%; max-height: 360px;"></a>
 
 Once you turn the box, the back reveals the phone specs and what's included in the box.
 
-----
+---
 
 <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1136.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1136.jpg" alt="The box unwrapped showing the front of the Flame phone" style="max-width: 33%; max-height: 180px;"></a>
 
 The box opens and reveals the front of the phone. Nothing fancy here, you've got your screen protective cover that peels off and an access to the bottom half of the box.
 
-----
+---
 
 <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1139.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1139.jpg" alt="The back of the Flame phone" style="max-width: 33%; max-height: 180px;"></a> <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1140.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1140.jpg" alt="The full back of the Flame phone" style="max-width: 33%; max-height: 180px;"></a>
 
 The back of the phone reveals a slot for an SD card and two SIM cards (2G+3G). The phone OS itself allows you to choose which one will be used for calls, mobile data, etc. The battery is not inserted into the phone at this point.
 
-----
+---
 
 <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1141.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1141.jpg" alt="The contents of the bottom half of the Flame phone box" style="max-width: 33%; max-height: 180px;"></a>
 
 The bottom half of the box contains the phone's back cover, micro-USB cable and earphones (quality not tested).
 
-----
+---
 
 <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1144.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1144.jpg" alt="The full contents of the Flame phone box" style="max-width: 33%; max-height: 180px;"></a> <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1145.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1145.jpg" alt="The label on the battery which reads 'alcatel onetouch'" style="max-width: 33%; max-height: 180px;"></a>
 
@@ -99,16 +99,15 @@ The full contents of the box. The Firefox OS sticker is a nice addition.
 
 A close-up of the battery reveals a label 'alcatel onetouch'. My best guess is the Flame phone is a modification of the [Alcatel One Touch Fire][onetouch] and they didn't spend the time to re-brand the battery. So Mozilla teams up with T<sup>2</sup>Mobile to bring us an Alcatel One Touch Fire variation that has 'ThunderSoft (R)' as a boot screen... feels like a Frankenstein's creation.
 
-  [onetouch]: http://www.gsmarena.com/alcatel_one_touch_fire-5319.php
+[onetouch]: http://www.gsmarena.com/alcatel_one_touch_fire-5319.php
 
-----
+---
 
 <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1147.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1147.jpg" alt="The first welcome screen of Firefox OS, selecting a language" style="max-width: 33%; max-height: 360px;"></a> <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1148.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1148.jpg" alt="The second welcome screen of Firefox OS, selecting a wi-fi network" style="max-width: 33%; max-height: 360px;"></a>
 
 With the battery in place, I accidentally held the phone at the top which prompted a boot. The OS was fairly quick to start (and so are subsequent reboots). The first-time use screens prompt to select a language and a wi-fi network. English (UK) is not an option.
 
-
-----
+---
 
 <a href="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1150.jpg" target="_blank"><img src="/assets/images/2014/08/25/day0-flame-unboxing/DSC_1150.jpg" alt="The phone's homescreen after first-time set up" style="max-width: 33%; max-height: 180px;"></a>
 

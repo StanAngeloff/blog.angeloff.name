@@ -3,13 +3,14 @@ title: "How much personal information do we share on-line?"
 date: 2009-02-04 04:33:00
 ---
 
-*Disclaimer: I am a software engineer and as much am involved in many projects some of which may require the use of data mining. I am in no means a data mining expert.*
+_Disclaimer: I am a software engineer and as much am involved in many projects some of which may require the use of data mining. I am in no means a data mining expert._
 
 We go on with our on-line identities without paying much attention to the details we share about our personal lives, interests, hobbies and friends. We have profiles on Facebook, accounts on Twitter, Flickr, YouTube, discussion boards and other public websites. These are all open and available to anyone. Could that affect us in any way?
 
 Excuse me, did you just say data mining?
+
 > Data mining is the process of sorting through large amounts of data and picking out relevant information. [...]
-[Wikipedia page on Data mining](http://en.wikipedia.org/wiki/Data_mining)
+> [Wikipedia page on Data mining](http://en.wikipedia.org/wiki/Data_mining)
 
 What good can it do? Imagine yourself sitting at home on a Saturday, no plans whatsoever, but things tend to get a bit boring. You go to www.i-have-no-plans-please-help.co.uk and you enter your user name, the very same user name you share across most websites. Here is where the magic happens:
 
@@ -22,9 +23,9 @@ What good can it do? Imagine yourself sitting at home on a Saturday, no plans wh
 
 Now imagine all that information gathered in just a few seconds. Using data mining relevant bits can be filtered and further analysed. Here is one possible suggestion www.i-have-no-plans-please-help.co.uk might throw at you:
 
-*Hey, it turns out last Saturday you went to a fancy Chinese restaurant [via Twitter] and you enjoyed the food [via Flickr]. Your friends are currently not very far away [via Google Latitude] and are organising a party [via Facebook], but they don't have any good ideas for a nice place [via discussion boards]. You should take them to the Chinese restaurant and after that you might catch a movie. It seems like everyone is talking about [RocknRolla](http://www.imdb.com/title/tt1032755/) [via Twitter, Facebook, IMDB boards]. And while you are at it, stop by Jennifer's place, her sister is in town [via Facebook] and you have a few hours to kill anyway.*
+_Hey, it turns out last Saturday you went to a fancy Chinese restaurant [via Twitter] and you enjoyed the food [via Flickr]. Your friends are currently not very far away [via Google Latitude] and are organising a party [via Facebook], but they don't have any good ideas for a nice place [via discussion boards]. You should take them to the Chinese restaurant and after that you might catch a movie. It seems like everyone is talking about [RocknRolla](http://www.imdb.com/title/tt1032755/) [via Twitter, Facebook, IMDB boards]. And while you are at it, stop by Jennifer's place, her sister is in town [via Facebook] and you have a few hours to kill anyway._
 
-*\* via xxx indicates the service(s) used to gather the information*
+_\* via xxx indicates the service(s) used to gather the information_
 
 It sounds a bit scary, doesn't it? But we are talking software here. The website doesn't really know you. It just analyses data and makes the best of it. What is scary is if someone decides to target you. We are bound to have someone take all this goodness and profit from it.
 

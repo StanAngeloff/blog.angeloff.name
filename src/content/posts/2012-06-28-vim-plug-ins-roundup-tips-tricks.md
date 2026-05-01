@@ -1,6 +1,6 @@
 ---
-title:  Vim plug-ins roundup, tips & tricks
-date:   2012-06-28 23:30:00
+title: Vim plug-ins roundup, tips & tricks
+date: 2012-06-28 23:30:00
 ---
 
 I am fairly new to Vim. [When I switched editors][switch] and moved to Vim completely (about an year ago), I looked around for plug-ins and scripts other Users were using. I knew I was going to improve my text editing speed just by using the core editor itself, however I was more keen on setting up my very own personal environment.
@@ -9,12 +9,11 @@ What helped me a great deal were all those <nobr>'[Vim plug-ins you MUST have][m
 
 As I started using Vim for everything (after an initial period of pain and suffering), I kept expanding my [.vimrc][vimrc] and soon found it had grown to contain a lot of useful and rare gems. My intentions are by sharing these here they would also help you be more productive in your day-to-day tasks in Vim.
 
-  [switch]: https://github.com/StanAngeloff/komodo-html-toolkit/issues/25#issuecomment-1924790
-  [must-have]: https://google.com/search?q=vim+plug-ins+must+have
-  [vimrc]: https://github.com/StanAngeloff/dotfiles/blob/master/.vimrc#files
+[switch]: https://github.com/StanAngeloff/komodo-html-toolkit/issues/25#issuecomment-1924790
+[must-have]: https://google.com/search?q=vim+plug-ins+must+have
+[vimrc]: https://github.com/StanAngeloff/dotfiles/blob/master/.vimrc#files
 
-Plug-ins
---------
+## Plug-ins
 
 ### **[godlygeek/tabular](https://github.com/godlygeek/tabular)**
 
@@ -68,11 +67,21 @@ and voila!
 
 ```html
 <ul>
-  <li><a href=""><span></span></a></li>
-  <li><a href=""><span></span></a></li>
-  <li><a href=""><span></span></a></li>
-  <li><a href=""><span></span></a></li>
-  <li><a href=""><span></span></a></li>
+  <li>
+    <a href=""><span></span></a>
+  </li>
+  <li>
+    <a href=""><span></span></a>
+  </li>
+  <li>
+    <a href=""><span></span></a>
+  </li>
+  <li>
+    <a href=""><span></span></a>
+  </li>
+  <li>
+    <a href=""><span></span></a>
+  </li>
 </ul>
 ```
 
@@ -84,13 +93,13 @@ HTML is dead, long live HTML5! This plug-in provides syntax highlighting for the
 
 It also plays nicely with other plug-ins, such as [php.vim][php].
 
-  [php]: https://github.com/StanAngeloff/php.vim
+[php]: https://github.com/StanAngeloff/php.vim
 
 ### **[pangloss/vim-javascript](https://github.com/pangloss/vim-javascript)**
 
 > Vastly improved JavaScript indentation.
 
-If you do a lot of JavaScript development, you have probably been driven to despair on each new line. Vim's default JavaScript syntax file is not very smart when it comes to indentation and it can sometimes be utterly stupid.  This plug-in puts a stop to it all.
+If you do a lot of JavaScript development, you have probably been driven to despair on each new line. Vim's default JavaScript syntax file is not very smart when it comes to indentation and it can sometimes be utterly stupid. This plug-in puts a stop to it all.
 
 ### **[samsonw/vim-task](https://github.com/samsonw/vim-task)**
 
@@ -124,7 +133,7 @@ noremap <leader>ss :SaveSession user<CR>
 noremap <leader>sr :OpenSession user<CR>
 ```
 
-Whenever you feel you need to close Vim, but want to be able to get back your opened buffers, use `\ss` (where `\` is the leader key) before `:q`uitting.  Next time you start Vim, use `\sr` to restore.
+Whenever you feel you need to close Vim, but want to be able to get back your opened buffers, use `\ss` (where `\` is the leader key) before `:q`uitting. Next time you start Vim, use `\sr` to restore.
 
 Note you wouldn't be able to save options like plug-ins state, e.g., opened directories in NERDTree.
 
@@ -132,7 +141,7 @@ Note you wouldn't be able to save options like plug-ins state, e.g., opened dire
 
 > Fuzzy file, buffer, mru, tag, etc finder.
 
-When I first got to Vim, I tried [Command-T][command-t]. I loved it... but having Ruby support available in Vim was proving an issue on some Windows machines.  You also need to compile a binary which further meant the plug-in cannot be used out-of-the-box in a new Vim installation.
+When I first got to Vim, I tried [Command-T][command-t]. I loved it... but having Ruby support available in Vim was proving an issue on some Windows machines. You also need to compile a binary which further meant the plug-in cannot be used out-of-the-box in a new Vim installation.
 
 CtrlP is a great alternative with a slew of new features to offer. You still get a fuzzy matching file finder, but you can also search for tags, recent buffers, etc.
 
@@ -148,7 +157,7 @@ nnoremap <silent> <leader>b :<C-U>CtrlPBufTag<CR>
 
 Use `\o` (where `\` is the leader key) to fuzzy match and open a file and `\b` to fuzzy match and move to a tag in the current buffer (quickly navigate to a method, etc.)
 
-  [command-t]: http://www.vim.org/scripts/script.php?script_id=3025
+[command-t]: http://www.vim.org/scripts/script.php?script_id=3025
 
 ### **[thinca/vim-visualstar](https://github.com/thinca/vim-visualstar)**
 
@@ -186,8 +195,7 @@ print implode(', ', ['Hello', 'World', <|>]);
 
 This is a great and quick way to change function arguments, list values, etc.
 
-Tips & Tricks
--------------
+## Tips & Tricks
 
 ### **Keep Your Focus**
 
@@ -201,7 +209,7 @@ It takes some getting used to, but eventually (hopefully) you will find there is
 
 ### **Relative Line Numbers**
 
-I have always found this particular 'feature' of Vim to be extremely annoying.  That is until I decided to try and live with it for at least a week. Coupled with the technique above, the editor becomes static and all that ever changes is the buffer itself. You can also much more easily navigate to a particular line since you know how many lines away it happens to be.
+I have always found this particular 'feature' of Vim to be extremely annoying. That is until I decided to try and live with it for at least a week. Coupled with the technique above, the editor becomes static and all that ever changes is the buffer itself. You can also much more easily navigate to a particular line since you know how many lines away it happens to be.
 
 ```vim
 set rnu  " Show relative line numbers.
@@ -217,7 +225,7 @@ set synmaxcol=512
 
 ### **Dreadful 'Ex' mode**
 
-`Q` must be one of the most useless default key bindings in Vim.  I have yet to hear someone making extensive use of 'Ex' mode. It is much more efficient having `Q` save and quit the current buffer (and you would also never have to type `visual` again):
+`Q` must be one of the most useless default key bindings in Vim. I have yet to hear someone making extensive use of 'Ex' mode. It is much more efficient having `Q` save and quit the current buffer (and you would also never have to type `visual` again):
 
 ```vim
 nnoremap <silent> Q ZZ
@@ -234,7 +242,6 @@ nnoremap <leader>w4 :setlocal tabstop=4<CR>:setlocal shiftwidth=4<CR>
 nnoremap <leader>w8 :setlocal tabstop=8<CR>:setlocal shiftwidth=8<CR>
 ```
 
-Final Words
------------
+## Final Words
 
 Leave a comment with your favourite, not-so-popular Vim plug-in or script below. Share this article with friends and on Twitter. I hope it has helped you make your Vim a little bit nicer to work from.

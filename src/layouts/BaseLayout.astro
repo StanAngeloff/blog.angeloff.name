@@ -5,100 +5,139 @@ interface Props {
   ogType?: string;
 }
 
-const siteName = 'tmpfs /home/stan';
-const siteUrl = 'https://blog.angeloff.name';
-const siteDescription = "Stan Angeloff's blog, a collection of thoughts, rants & research";
-const { title, description = siteDescription, ogType = 'website' } = Astro.props;
+const siteName = "tmpfs /home/stan";
+const siteUrl = "https://blog.angeloff.name";
+const siteDescription =
+  "Stan Angeloff's blog, a collection of thoughts, rants & research";
+const {
+  title,
+  description = siteDescription,
+  ogType = "website",
+} = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const ogTitle = title || siteName;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{pageTitle}</title>
-  <meta name="description" content={description}>
-  <meta name="author" content="Stan Angeloff">
-  <meta name="fediverse:creator" content="@stanangeloff@mastodon.social">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="canonical" href={canonicalUrl}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Stan Angeloff" />
+    <meta name="fediverse:creator" content="@stanangeloff@mastodon.social" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
 
-  <meta property="og:site_name" content={siteName}>
-  <meta property="og:url" content={canonicalUrl}>
-  <meta property="og:title" content={ogTitle}>
-  <meta property="og:type" content={ogType}>
-  <meta property="og:description" content={description}>
-  <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="en_US" />
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@StanAngeloff">
-  <meta name="twitter:title" content={ogTitle}>
-  <meta name="twitter:description" content={description}>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@StanAngeloff" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={description} />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Serif:wght@600;700&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.indigo.min.css">
-  <style is:global>
-    :root {
-      --pico-font-family: 'IBM Plex Sans', system-ui, sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'IBM Plex Serif', serif;
-    }
-  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Serif:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.indigo.min.css"
+    />
+    <style is:global>
+      :root {
+        --pico-font-family: "IBM Plex Sans", system-ui, sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "IBM Plex Serif", serif;
+      }
+    </style>
 
-  <link rel="alternate" type="application/atom+xml" title={siteName} href="/atom.xml">
-  <link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml">
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title={siteName}
+      href="/atom.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={siteName}
+      href="/rss.xml"
+    />
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": siteName,
-    "description": siteDescription,
-    "url": siteUrl,
-    "author": {
-      "@type": "Person",
-      "name": "Stan Angeloff",
-      "url": `${siteUrl}/about/`,
-      "sameAs": [
-        "https://github.com/StanAngeloff",
-        "https://mastodon.social/@stanangeloff",
-        "https://www.linkedin.com/in/stanangeloff/",
-        "https://x.com/StanAngeloff"
-      ]
-    }
-  })} />
-</head>
-<body>
-  <header class="container">
-    <nav>
-      <ul>
-        <li><strong><a href="/">{siteName}</a></strong></li>
-      </ul>
-      <ul>
-        <li><a href="/">Blog</a></li>
-        <li><a href="/about/">About</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="container">
-    <slot />
-  </main>
-  <footer class="container">
-    <nav>
-      <ul>
-        <li><a href="https://github.com/StanAngeloff">GitHub</a></li>
-        <li><a href="https://news.ycombinator.com/user?id=StanAngeloff">HN</a></li>
-        <li><a href="https://mastodon.social/@stanangeloff" rel="me">Mastodon</a></li>
-        <li><a href="https://www.linkedin.com/in/stanangeloff/">LinkedIn</a></li>
-        <li><a href="https://x.com/StanAngeloff">X</a></li>
-      </ul>
-    </nav>
-    <small>&copy; {new Date().getFullYear()} Stan Angeloff. The posts and source code in this blog, unless stated otherwise, are made available under the MIT License.</small>
-  </footer>
-</body>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        name: siteName,
+        description: siteDescription,
+        url: siteUrl,
+        author: {
+          "@type": "Person",
+          name: "Stan Angeloff",
+          url: `${siteUrl}/about/`,
+          sameAs: [
+            "https://github.com/StanAngeloff",
+            "https://mastodon.social/@stanangeloff",
+            "https://www.linkedin.com/in/stanangeloff/",
+            "https://x.com/StanAngeloff",
+          ],
+        },
+      })}
+    />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><strong><a href="/">{siteName}</a></strong></li>
+        </ul>
+        <ul>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="container">
+      <nav>
+        <ul>
+          <li><a href="https://github.com/StanAngeloff">GitHub</a></li>
+          <li>
+            <a href="https://news.ycombinator.com/user?id=StanAngeloff">HN</a>
+          </li>
+          <li>
+            <a href="https://mastodon.social/@stanangeloff" rel="me"
+              >Mastodon</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/stanangeloff/">LinkedIn</a>
+          </li>
+          <li><a href="https://x.com/StanAngeloff">X</a></li>
+        </ul>
+      </nav>
+      <small
+        >&copy; {new Date().getFullYear()} Stan Angeloff. The posts and source code
+        in this blog, unless stated otherwise, are made available under the MIT License.</small
+      >
+    </footer>
+  </body>
 </html>

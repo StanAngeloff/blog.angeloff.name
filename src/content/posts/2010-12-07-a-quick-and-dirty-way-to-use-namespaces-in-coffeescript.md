@@ -1,6 +1,6 @@
 ---
-title:  A quick and dirty way to use namespaces in CoffeeScript
-date:   2010-12-07 16:07:00
+title: A quick and dirty way to use namespaces in CoffeeScript
+date: 2010-12-07 16:07:00
 ---
 
 ```coffeescript

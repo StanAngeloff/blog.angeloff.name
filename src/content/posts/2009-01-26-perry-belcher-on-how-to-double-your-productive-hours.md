@@ -9,4 +9,4 @@ I found this video while browsing on Twitter. It is more or less a follow up on 
 
 I have been employing Perry's approach for a week. It really is comfortable knowing all you ever had to remember is now written down and away from everything else you need to deal with right now.
 
-You can [follow Perry Belcher on Twitter](http://www.twitter.com/perrybelcher) or have a look at *"[some stupid home videos](http://www.youtube.com/user/perrybelcher)"*.
+You can [follow Perry Belcher on Twitter](http://www.twitter.com/perrybelcher) or have a look at _"[some stupid home videos](http://www.youtube.com/user/perrybelcher)"_.

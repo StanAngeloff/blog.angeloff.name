@@ -1,20 +1,20 @@
 ---
-title:  Ubuntu 12.04 - Super key not working in shortcuts
-date:   2012-08-08 12:00:00
+title: Ubuntu 12.04 - Super key not working in shortcuts
+date: 2012-08-08 12:00:00
 ---
 
 If you are running the latest Ubuntu this Summer and are trying to configure your keyboard shortcuts to use the `Super` key, you may be out of luck.
 
-Up until recently, I was quite happy with my `Super+E` key launching `nautilus` in my home directory. I went to *Keyboard Shortcuts* and played around with the configuration and then restored my original values. To my surprise, I could no longer open `nautilus` with the key combination `Super+E`.
+Up until recently, I was quite happy with my `Super+E` key launching `nautilus` in my home directory. I went to _Keyboard Shortcuts_ and played around with the configuration and then restored my original values. To my surprise, I could no longer open `nautilus` with the key combination `Super+E`.
 It took me all evening to find a solution and as it turns out, there are several issues at play:
 
 - If you haven't mapped your `Super` key yet, you are [advised to do so][map-super-key] before you continue.
-- There is a [long standing issue with multiple regressions][long-standing-issue] where *Unity* is blocking any other apps from receiving the `Super` key if the Dash is configured to open just by using that key. You should set it to a key combination, e.g., `Super+L` or similar.
-- The latest regression [Unity blocks other programs from binding globally to Super+* or Alt+* (* = any key)][latest-regression] has been fixed, but not officially released.
+- There is a [long standing issue with multiple regressions][long-standing-issue] where _Unity_ is blocking any other apps from receiving the `Super` key if the Dash is configured to open just by using that key. You should set it to a key combination, e.g., `Super+L` or similar.
+- The latest regression [Unity blocks other programs from binding globally to Super+_ or Alt+_ (\* = any key)][latest-regression] has been fixed, but not officially released.
 
-  [map-super-key]:       http://askubuntu.com/a/138136/49686
+  [map-super-key]: http://askubuntu.com/a/138136/49686
   [long-standing-issue]: https://bugs.launchpad.net/ubuntu/+source/unity/+bug/704231
-  [latest-regression]:   https://bugs.launchpad.net/ubuntu/+source/gnome-settings-daemon/+bug/950160
+  [latest-regression]: https://bugs.launchpad.net/ubuntu/+source/gnome-settings-daemon/+bug/950160
 
 So, at the end, it turns out it's `gnome-settings-daemon` being faulty. To get the updated version, which should fix the issue on Ubuntu 12.04, you need to accept packages from the [`proposed`][proposed] archive.
 
@@ -61,6 +61,6 @@ $ sudo apt-get install gnome-settings-daemon/precise-proposed
 
 Unfortunately you would likely need to restart the system for changes to take effect. In my case I `kill`ed the daemon, but in the process it didn't reload with the correct settings and I experienced a nasty crash.
 
-  [proposed]: https://wiki.ubuntu.com/Testing/EnableProposed
+[proposed]: https://wiki.ubuntu.com/Testing/EnableProposed
 
 I hope changes would be pushed to stable channels soon which would make this post obsolete, but in the interim, enjoy your `Super` key combos working again.

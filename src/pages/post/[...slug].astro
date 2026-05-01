@@ -1,16 +1,16 @@
 ---
-import { getCollection, render } from 'astro:content';
-import PostLayout from '../../layouts/PostLayout.astro';
-import fs from 'node:fs';
-import path from 'node:path';
+import { getCollection, render } from "astro:content";
+import PostLayout from "../../layouts/PostLayout.astro";
+import fs from "node:fs";
+import path from "node:path";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('posts');
+  const posts = await getCollection("posts");
   return posts.map((post) => {
     const date = post.data.date;
     const y = String(date.getUTCFullYear());
-    const m = String(date.getUTCMonth() + 1).padStart(2, '0');
-    const d = String(date.getUTCDate()).padStart(2, '0');
+    const m = String(date.getUTCMonth() + 1).padStart(2, "0");
+    const d = String(date.getUTCDate()).padStart(2, "0");
     const titleSlug = post.id.slice(11);
     return {
       params: { slug: `${y}/${m}/${d}/${titleSlug}` },
@@ -20,12 +20,15 @@ export async function getStaticPaths() {
 }
 
 function extractDescription(id: string): string | undefined {
-  const filePath = path.join(process.cwd(), 'src/content/posts', `${id}.md`);
-  const raw = fs.readFileSync(filePath, 'utf-8');
-  const body = raw.replace(/^---[\s\S]*?---\s*/, '');
-  const firstPara = body.split(/\n\n/)[0]?.replace(/[#*`\[\]()!<>]/g, '').trim();
+  const filePath = path.join(process.cwd(), "src/content/posts", `${id}.md`);
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const body = raw.replace(/^---[\s\S]*?---\s*/, "");
+  const firstPara = body
+    .split(/\n\n/)[0]
+    ?.replace(/[#*`\[\]()!<>]/g, "")
+    .trim();
   if (firstPara && firstPara.length > 10) {
-    return firstPara.length > 155 ? firstPara.slice(0, 152) + '...' : firstPara;
+    return firstPara.length > 155 ? firstPara.slice(0, 152) + "..." : firstPara;
   }
 }
 
@@ -34,6 +37,10 @@ const { Content } = await render(post);
 const description = extractDescription(post.id);
 ---
 
-<PostLayout title={post.data.title} date={post.data.date} description={description}>
+<PostLayout
+  title={post.data.title}
+  date={post.data.date}
+  description={description}
+>
   <Content />
 </PostLayout>

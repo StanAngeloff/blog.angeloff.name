@@ -1,6 +1,6 @@
 ---
-title:  'Cross-compiling BusyBox to run on the Intel Atom Z3745 inside an ASUS MeMO Pad (ME176C)'
-date:   2015-01-03 13:30:00
+title: "Cross-compiling BusyBox to run on the Intel Atom Z3745 inside an ASUS MeMO Pad (ME176C)"
+date: 2015-01-03 13:30:00
 ---
 
 I recently acquired the very inexpensive [ASUS MeMO Pad (ME176C)][ME176C]. It's a [surprisingly great device][the-verge] with an excellent screen and, best of all, a powerful [Intel Atom Z3745][Z3745] inside. The tablet comes with Android 4.4 (KitKat), however I want to run Ubuntu LTS from a `chroot`. I soon discovered I needed to compile BusyBox from source in order to achieve this.
@@ -131,15 +131,13 @@ make
 #     busybox: ELF 32-bit LSB  executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), stripped
 ```
 
-
-  [ME176C]: http://www.asus.com/Tablets/ASUS_MeMO_Pad_7_ME176C/
-  [the-verge]: https://www.youtube.com/watch?v=kPyVptxhJ9U
-  [Z3745]: http://ark.intel.com/products/80270/Intel-Atom-Processor-Z3745-2M-Cache-up-to-1_86-GHz
-  [how-to-root]: http://forum.xda-developers.com/showpost.php?p=55229933&postcount=22
-  [RootZenFone]: http://23pin.logdown.com/posts/230216-root-rootzenfone-14r
-  [android-ndk]: https://developer.android.com/tools/sdk/ndk/index.html#download
-  [tias-guns]: https://github.com/tias/android-busybox-ndk
-
+[ME176C]: http://www.asus.com/Tablets/ASUS_MeMO_Pad_7_ME176C/
+[the-verge]: https://www.youtube.com/watch?v=kPyVptxhJ9U
+[Z3745]: http://ark.intel.com/products/80270/Intel-Atom-Processor-Z3745-2M-Cache-up-to-1_86-GHz
+[how-to-root]: http://forum.xda-developers.com/showpost.php?p=55229933&postcount=22
+[RootZenFone]: http://23pin.logdown.com/posts/230216-root-rootzenfone-14r
+[android-ndk]: https://developer.android.com/tools/sdk/ndk/index.html#download
+[tias-guns]: https://github.com/tias/android-busybox-ndk
 
 ### Get BusyBox on the MeMO Pad
 

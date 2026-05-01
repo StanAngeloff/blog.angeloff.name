@@ -3,7 +3,7 @@ title: "Can we have too much information?"
 date: 2009-01-19 00:50:00
 ---
 
-The Internet is a great source of information, no one can deny it. While once you would have to go to the library or buy special literature to learn more about quantum physics, nowadays you can join one of the hundreds clubs available on the web or simply try Wikipedia */Google is also entering the market with [Knol](http://knol.google.com/)/*. There is nothing you can't learn about, all you need is time on your hands. You have the tools, you have the sources. But can we have too much information?
+The Internet is a great source of information, no one can deny it. While once you would have to go to the library or buy special literature to learn more about quantum physics, nowadays you can join one of the hundreds clubs available on the web or simply try Wikipedia _/Google is also entering the market with [Knol](http://knol.google.com/)/_. There is nothing you can't learn about, all you need is time on your hands. You have the tools, you have the sources. But can we have too much information?
 
 Did you know that every time you glance at the moon your brain throws something else away? We humans simply can't comprehend the vastness of information out there. Our brains have limited capacity, they can only store as much memories. When there is not enough room, something needs to go away. Stop and think about it for a second… yes, the simple act of observing an object costs you brain space. So does watching television or having a chat with your mates. Everything you do needs to be recorded so you can play it back later. But we are not like computers, we cannot 'add' more space. What we have is what we get. What role does the Internet play in all this madness?
 

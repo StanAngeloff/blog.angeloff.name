@@ -1,13 +1,13 @@
 ---
-title:  'Day 2-7: Using Firefox OS'
-date:   2014-09-01 20:30:00
+title: "Day 2-7: Using Firefox OS"
+date: 2014-09-01 20:30:00
 ---
 
 ### The Experiment
 
 I recently decided to give Firefox OS a try and ordered a [Flame][flame] developer reference phone. This will be an attempt at a blog series capturing my first 30 days of usage. I will do my best to blog as frequently as I can, usually once or twice a week as I get more accustomed to the new platform.
 
-  [flame]: https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide/Flame
+[flame]: https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide/Flame
 
 ### The Bad & Ugly
 

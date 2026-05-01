@@ -1,4 +1,4 @@
-import type { APIRoute } from 'astro';
+import type { APIRoute } from "astro";
 
 export const GET: APIRoute = () => {
   const lastUpdate = new Date().toISOString().slice(0, 10);
@@ -16,6 +16,6 @@ Software: Astro, Pico CSS
 Hosting: GitHub Pages
 `;
   return new Response(body, {
-    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+    headers: { "Content-Type": "text/plain; charset=utf-8" },
   });
 };
