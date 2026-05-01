@@ -187,4 +187,4 @@ Check out the [list of all available commands](https://github.com/StanAngeloff/c
 I hope you found this short walk-through useful.
 Leave a comment if you have any questions or suggestions and visit the [official Github](https://github.com/StanAngeloff/compass-magick) page of the project for up-to-date information and links to other resources.
 
-**UPDATE**: [Part 2 is now available](http://blog.angeloff.name/post/5040777009/compass-magick-tutorial-part-2)
+**UPDATE**: [Part 2 is now available](/post/2011/04/29/compass-magick-tutorial-part-2/)

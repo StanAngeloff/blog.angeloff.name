@@ -7,7 +7,7 @@ There is more to Compass Magick than gradients and borders. In the second part o
 
 <!-- more -->
 
-## Recap of [Part 1](http://blog.angeloff.name/post/4659977659/compass-magick-tutorial-part-1)
+## Recap of [Part 1](/post/2011/04/16/compass-magick-tutorial-part-1/)
 
 In Part 1 we completed the tutorial with a simple button-like shape:
 

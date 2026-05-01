@@ -22,4 +22,4 @@ Here's what the output looks like:
     >>> paperserve: running on port 8000, serving from '/cygdrive/d/Workspace/public/node-paperserve'
     >>> paperserve:   Press Ctrl-C to stop.
 
-Source code can be found on [GitHub](http://github.com/StanAngeloff/node-paperserve). As for the motivation behind the project -- let's just say I prefer JavaScript to [Python](http://blog.angeloff.name/post/931456447/in-need-of-a-simple-web-server).
+Source code can be found on [GitHub](http://github.com/StanAngeloff/node-paperserve). As for the motivation behind the project -- let's just say I prefer JavaScript to [Python](/post/2010/08/10/in-need-of-a-simple-web-server/).

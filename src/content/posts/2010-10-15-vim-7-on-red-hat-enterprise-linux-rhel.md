@@ -3,7 +3,7 @@ title: Vim 7 on Red Hat Enterprise Linux (RHEL)
 date: 2010-10-15 14:53:00
 ---
 
-Following my [last post](http://tumblr.com/xskltn6s1) I moved on to installing Vim 7.x as the one that comes with RHEL 4 is pretty outdated (6.x).
+Following my [last post](/post/2010/10/15/git-on-red-hat-enterprise-linux-rhel-4-i386/) I moved on to installing Vim 7.x as the one that comes with RHEL 4 is pretty outdated (6.x).
 
 ## Vim 7.2 from SVN
 

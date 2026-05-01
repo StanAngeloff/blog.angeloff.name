@@ -26,4 +26,4 @@ You can install MinTTY and ZSH using Cygwin's [setup.exe](http://www.cygwin.com/
 
 ### MinTTY at your fingertips
 
-Having a terminal keystroke away is essential in my day-to-day work. I need to be able to quickly get in and out of it -- [read how to do it](http://blog.angeloff.name/post/1104619682/mintty-at-your-fingertips).
+Having a terminal keystroke away is essential in my day-to-day work. I need to be able to quickly get in and out of it -- [read how to do it](/post/2010/09/11/mintty-at-your-fingertips/).
