@@ -12,7 +12,7 @@ Recap of [Part 1](http://blog.angeloff.name/post/4659977659/compass-magick-tutor
 
 In Part 1 we completed the tutorial with a simple button-like shape:
 
-![Example 4](http://i.imgur.com/hBLg0.png)
+![Example 4](/assets/images/imgur/hBLg0.png)
 
 We generated the shape using linear gradients, corners and borders from Magick:
 
@@ -87,7 +87,7 @@ body {
 
 Yields the following result:
 
-![Example 5](http://i.imgur.com/LxR7H.png)
+![Example 5](/assets/images/imgur/LxR7H.png)
 
 It's not exactly what I would call pretty so let's make some changes to the dimensions and colours of the button:
 
@@ -102,7 +102,7 @@ $button_height: 32px;
 /* …snip… */
 ```
 
-![Example 6](http://i.imgur.com/QrO1E.png)
+![Example 6](/assets/images/imgur/QrO1E.png)
 
 The CSS `background-position` property allows control over where a background image appears inside its container. `magick-compose` gives us similar control. To offset the icon 5px horizontally and center it vertically, we pass `5px, 50%` after the canvas object (note arguments are comma-separated):
 
@@ -118,7 +118,7 @@ body {
 }
 ```
 
-![Example 7](http://i.imgur.com/1dGXv.png)
+![Example 7](/assets/images/imgur/1dGXv.png)
 
 Applying Effects
 ----------------
@@ -145,7 +145,7 @@ magick-compose(
 /* …snip… */
 ```
 
-![Example 8](http://i.imgur.com/yvRaX.png)
+![Example 8](/assets/images/imgur/yvRaX.png)
 
 The effects are applied to the canvas we are composing on top of the button shape. If we move `magick-effect` to the top-level canvas (where borders and corners are applied) then the entire button will be semi-transparent - not what we are after.
 
@@ -253,7 +253,7 @@ We are now ready to create a single image for our 3-state button. It is as easy 
 body { }
 ```
 
-![Example 9](http://i.imgur.com/jg8Ao.png)
+![Example 9](/assets/images/imgur/jg8Ao.png)
 
 Using the Button Sprite
 -----------------------

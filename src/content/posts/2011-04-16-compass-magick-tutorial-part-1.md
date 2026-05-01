@@ -85,7 +85,7 @@ body {
 }
 ```
 
-![Example 1](http://i.imgur.com/j1KUk.png)
+![Example 1](/assets/images/imgur/j1KUk.png)
 
 …and just like that we turned our canvas yellow. `magick-fill` accepts semi-transparent colors and most importantly of all, variables:
 
@@ -102,7 +102,7 @@ body {
 }
 ```
 
-![Example 2](http://i.imgur.com/3o3yy.png)
+![Example 2](/assets/images/imgur/3o3yy.png)
 
 What happened there? We created a 320x200 canvas and executed two commands on it:
 
@@ -131,7 +131,7 @@ body {
 }
 ```
 
-![Example 3](http://i.imgur.com/V9pb3.png)
+![Example 3](/assets/images/imgur/V9pb3.png)
 
 Going Further
 -------------
@@ -160,7 +160,7 @@ body {
 }
 ```
 
-![Example 4](http://i.imgur.com/hBLg0.png)
+![Example 4](/assets/images/imgur/hBLg0.png)
 
 Saving the Canvas
 -----------------

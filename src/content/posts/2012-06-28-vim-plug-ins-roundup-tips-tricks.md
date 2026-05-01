@@ -98,7 +98,7 @@ If you do a lot of JavaScript development, you have probably been driven to desp
 
 I like keeping NOTEs and TODOs in my projects. This is a very simple plug-in which provides syntax highlighting for `*.tasks` files and a couple of handy key bindings to deal with resolving items.
 
-<a href="http://blog.samsonis.me/wp-content/uploads/2010/09/vim-task.png"><img title="Vim-Task with Monaco font" src="http://blog.samsonis.me/wp-content/uploads/2010/09/vim-task.png" alt="Vim-Task with Monaco font" width="300"></a>
+<a href="/assets/images/vim-task.png"><img title="Vim-Task with Monaco font" src="/assets/images/vim-task.png" alt="Vim-Task with Monaco font" width="300"></a>
 
 ### **[sjl/gundo.vim](https://github.com/sjl/gundo.vim)**
 
@@ -106,7 +106,7 @@ I like keeping NOTEs and TODOs in my projects. This is a very simple plug-in whi
 
 Undone your changes, tried something different and then realised you want to get your old code back? Gundo comes to the rescue giving you a tree of all edits and points of interest in the history.
 
-<a href="http://www.flickr.com/photos/sjl7678/5093114605/" title="gundo by stevelosh, on Flickr"><img src="http://farm5.static.flickr.com/4113/5093114605_ebc46d6494.jpg" width="300" alt="gundo" /></a>
+<a href="http://www.flickr.com/photos/sjl7678/5093114605/" title="gundo by stevelosh, on Flickr"><img src="/assets/images/flickr/gundo.jpg" width="300" alt="gundo" /></a>
 
 ### **[session.vim--Odding](https://github.com/vim-scripts/session.vim--Odding)**
 

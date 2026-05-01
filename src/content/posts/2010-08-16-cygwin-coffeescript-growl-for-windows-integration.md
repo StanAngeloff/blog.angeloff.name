@@ -45,7 +45,7 @@ CoffeeScript.on 'failure', (exception, task) ->
   process() if icon
 ```
 
-We also need a [proper icon](http://i.imgur.com/SaUrK.png) -- save it in the script folder as `icon-coffee-cup.png`.
+We also need a [proper icon](/assets/images/imgur/SaUrK.png) -- save it in the script folder as `icon-coffee-cup.png`.
 
 Next time you run the `coffee` command line utility, append `-r growlnotify-windows` like so:
 
@@ -55,6 +55,6 @@ $ coffee -r growlnotify-windows -wc src/
 
 and when the compiler encounters an exception, you will receive a nice UI prompt like this:
 
-![Smokestack theme preview](http://i.imgur.com/M2OiE.png)
+![Smokestack theme preview](/assets/images/imgur/M2OiE.png)
 
 Happy coding!

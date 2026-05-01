@@ -16,7 +16,7 @@ If you have used PuTTY to connect to remote machines, you would love [**MinTTY**
   * Window transparency, including glass effect on Vista and 7.
   * Small program size and  uick scrolling.
 
-![MinTTY preview](http://i.imgur.com/EBpvY.png)
+![MinTTY preview](/assets/images/imgur/EBpvY.png)
 
 ## Shell
 
