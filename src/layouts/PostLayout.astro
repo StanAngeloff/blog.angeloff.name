@@ -4,12 +4,13 @@ import BaseLayout from './BaseLayout.astro';
 interface Props {
   title: string;
   date: Date;
+  description?: string;
 }
 
-const { title, date } = Astro.props;
+const { title, date, description } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description} ogType="article">
   <article>
     <header>
       <h1>{title}</h1>

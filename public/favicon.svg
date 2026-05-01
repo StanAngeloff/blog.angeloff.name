@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    rect { fill: #e6e9ef; }
+    .dim { fill: #8c8fa1; }
+    .bright { fill: #4c4f69; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #1e1e2e; }
+      .dim { fill: #6c7086; }
+      .bright { fill: #cdd6f4; }
+    }
+  </style>
+  <rect width="64" height="64" rx="8"/>
+  <text x="32" y="30" text-anchor="middle" font-family="monospace" font-size="14" class="dim">/tmp</text>
+  <text x="32" y="50" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" class="bright">fs</text>
+</svg>

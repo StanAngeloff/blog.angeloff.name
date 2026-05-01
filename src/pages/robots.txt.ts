@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
-  const body = `Sitemap: https://blog.angeloff.name/sitemap-index.xml
+  const body = `User-agent: *
+Allow: /
 
-User-agent: *
-Crawl-delay: 1
+Sitemap: https://blog.angeloff.name/sitemap-index.xml
 `;
   return new Response(body, {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },
