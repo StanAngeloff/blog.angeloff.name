@@ -5,7 +5,7 @@ date:   2010-10-15 14:04:00
 
 I have been struggling with this for a while now. There is no `yum` to begin with and `up2date` doesn't help much either (no `git-*` packages). Here is a quick solution:
 
-```bash
+```shellsession
 $ cd ~
 $ wget http://packages.sw.be/git/git-1.7.3-1.el4.rf.i386.rpm
 $ wget http://packages.sw.be/git/perl-Git-1.7.3-1.el4.rf.i386.rpm

@@ -15,13 +15,49 @@ It's a great tool, but it doesn't work with Zsh out-of-the box (trivial to modif
 
 I stumbled upon [Ivan Čukić's excellent blog post](http://ivan.fomentgroup.org/blog/2010/01/29/zsh-bookmarks-for-cd-change-directory-with-completion/). It's so cool, I couldn't resist trying it. I took the functions and tweaked the path where the database is stored and how it is accessed. This is a better solution compared to `go` and as a bonus it also offers auto-completion:
 
-<script src="https://gist.github.com/558158.js"></script>
+```bash
+ZSH_BOOKMARKS="$HOME/.zsh/cdbookmarks"
+
+function cdb_edit() {
+  $EDITOR "$ZSH_BOOKMARKS"
+}
+
+function cdb() {
+  local index
+  local entry
+  index=0
+  for entry in $(echo "$1" | tr '/' '\n'); do
+    if [[ $index == "0" ]]; then
+      local CD
+      CD=$(egrep "^$entry\\s" "$ZSH_BOOKMARKS" | sed "s#^$entry\\s\+##")
+      if [ -z "$CD" ]; then
+        echo "$0: no such bookmark: $entry"
+        break
+      else
+        cd "$CD"
+      fi
+    else
+      cd "$entry"
+      if [ "$?" -ne "0" ]; then
+        break
+      fi
+    fi
+    let "index++"
+  done
+}
+
+function _cdb() {
+  reply=(`cat "$ZSH_BOOKMARKS" | sed -e 's#^\(.*\)\s.*$#\1#g'`)
+}
+
+compctl -K _cdb cdb
+```
 
 ### How to Use It
 
 Paste the above code at the bottom of your `~/.zshrc` file. Restart your terminal and run `cdb_edit`. This should bring up an empty buffer in your `$EDITOR`. To define shortcuts, use `shortcut  absolute/path`. Here is an example file:
 
-```bash
+```shellsession
 $ cdb_edit
 
 public    /cygdrive/d/Workspace/public/
@@ -41,7 +77,7 @@ Using the database above as an example:
 
 If you are looking for something more sophisticated which wouldn't involve maintaining a database using vim then you need [Jump, a bookmarking system for the bash and zsh shells](http://github.com/flavio/jump). It's a great tool and quite easy to install too:
 
-```bash
+```shellsession
 $ gem install jump
 $ cp `gem contents jump | grep zsh` ~/.jump_shell_driver
 ```

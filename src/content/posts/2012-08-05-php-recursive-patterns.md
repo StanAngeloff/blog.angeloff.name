@@ -52,7 +52,7 @@ array (
 
 To deal with balanced pairs, we need a way to descend into a pair and repeat the pattern. In pseudo Basic-like regular expressions code this would mean:
 
-```
+```text
 10: expect an opening '{'
 20:   read until
 21:     '{' or '}' is encountered

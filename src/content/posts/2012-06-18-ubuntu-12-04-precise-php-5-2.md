@@ -17,7 +17,7 @@ when you attempt to `./configure` PHP 5.2.x (and possibly earlier series as well
 
 This instructs the script to look for libraries under `/usr/lib/x86_64-linux-gnu` instead of `/usr/lib`. If this doesn't work for you, try running:
 
-```bash
+```shellsession
 $ sudo updatedb
 $ locate 'libXXX' | grep 'so$'
 ```

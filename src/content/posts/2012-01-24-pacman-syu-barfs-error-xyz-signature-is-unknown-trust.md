@@ -7,7 +7,7 @@ Things kept getting better and better. Following the recent [pacman upgrade](htt
 
 You remember all those `/etc/config saved as /etc/config.new` messages. Yes, as it turns out these are important. Given you haven't modified your `pacman` configuration (perhaps added to the `HoldPkg` list recently?), you can safely accept the new values:
 
-```bash
+```shellsession
 $ [sudo] mv /etc/pacman.conf /etc/pacman.conf.pacprev
 $ [sudo] mv /etc/pacman.conf.pacnew /etc/pacman.conf
 ```

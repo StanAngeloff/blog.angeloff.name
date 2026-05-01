@@ -9,7 +9,7 @@ Following my [last post](http://tumblr.com/xskltn6s1) I moved on to installing V
 
 Tested on RHEL 4 i386:
 
-```bash
+```shellsession
 $ cd ~
 $ svn co https://vim.svn.sourceforge.net/svnroot/vim/vim7
 $ cd vim7
@@ -23,7 +23,7 @@ VIM - Vi IMproved 7.2 (2008 Aug 9)
 
 Tested on RHEL 5 x86_64:
 
-```bash
+```shellsession
 $ cd ~
 $ yum install hg ncurses-devel
 $ hg clone https://vim.googlecode.com/hg/ vim
@@ -36,7 +36,7 @@ VIM - Vi IMproved 7.3 (2010 Aug 15)
 
 RHEL 4 comes with `up2date`. I tried `-i mercurial` and `-i hg`, but both failed. Vim offers an archived download so you can skip steps 3-4 above and instead use:
 
-```bash
+```shellsession
 # [..]
 $ wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
 $ tar xjvf vim-7.3.tar.bz2

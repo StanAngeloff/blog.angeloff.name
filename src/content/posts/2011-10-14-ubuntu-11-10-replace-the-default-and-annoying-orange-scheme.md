@@ -7,7 +7,7 @@ Switching to Ubuntu 11.10 is painful, ugly and time consuming... but more on tha
 
 I was quite surprised to see most of the theme control options are now gone. The Appearance panel has no colour tweaks and I hate the default orange scheme. Luckily, there is a way to change it in Gtk3:
 
-```bash
+```shellsession
 $ sudo apt-get install dconf-tools
 $ dconf-editor
 ```

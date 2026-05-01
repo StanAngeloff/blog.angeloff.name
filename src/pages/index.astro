@@ -1,14 +1,11 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const PAGE_SIZE = 5;
 const allPosts = await getCollection('posts');
 const sorted = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-const totalPages = Math.ceil(sorted.length / PAGE_SIZE);
-const posts = sorted.slice(0, PAGE_SIZE);
 
-function postUrl(post: typeof posts[0]) {
+function postUrl(post: typeof sorted[0]) {
   const date = post.data.date;
   const y = String(date.getUTCFullYear());
   const m = String(date.getUTCMonth() + 1).padStart(2, '0');
@@ -16,38 +13,41 @@ function postUrl(post: typeof posts[0]) {
   return `/post/${y}/${m}/${d}/${post.id.slice(11)}/`;
 }
 
-const renderedExcerpts = await Promise.all(
-  posts.map(async (post) => {
-    const { Content } = await render(post);
-    return Content;
-  })
-);
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+type PostEntry = typeof sorted[0];
+const byYear = new Map<number, Map<number, PostEntry[]>>();
+for (const post of sorted) {
+  const y = post.data.date.getUTCFullYear();
+  const m = post.data.date.getUTCMonth();
+  if (!byYear.has(y)) byYear.set(y, new Map());
+  const yearMap = byYear.get(y)!;
+  if (!yearMap.has(m)) yearMap.set(m, []);
+  yearMap.get(m)!.push(post);
+}
 ---
 
 <BaseLayout>
-  <div class="posts">
-    {posts.map((post, i) => {
-      const ExcerptContent = renderedExcerpts[i];
-      return (
-        <article>
-          <h2><a href={postUrl(post)}>{post.data.title}</a></h2>
-          <time datetime={post.data.date.toISOString()}>
-            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-          </time>
-          <ExcerptContent />
-        </article>
-      );
-    })}
-  </div>
-  <nav>
-    <ul>
-      <li><span>Newer</span></li>
-      <li>
-        {totalPages > 1
-          ? <a href="/page,2/">Older</a>
-          : <span>Older</span>
-        }
-      </li>
-    </ul>
-  </nav>
+  {[...byYear.entries()].map(([year, monthMap]) => (
+    <section>
+      <h2>{year}</h2>
+      {[...monthMap.entries()].map(([month, posts]) => (
+        <div>
+          <h3>{months[month]}</h3>
+          <ul>
+            {posts.map((post) => (
+              <li>
+                <a href={postUrl(post)}>{post.data.title}</a>
+                <small>
+                  <time datetime={post.data.date.toISOString()}>
+                    {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                  </time>
+                </small>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+  ))}
 </BaseLayout>

@@ -5,7 +5,7 @@ date:   2010-08-17 14:57:00
 
 **Install**
 
-```bash
+```shellsession
 $ npm install paperserve
 ```
 

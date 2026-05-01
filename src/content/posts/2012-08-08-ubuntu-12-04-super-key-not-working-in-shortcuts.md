@@ -20,7 +20,7 @@ So, at the end, it turns out it's `gnome-settings-daemon` being faulty. To get t
 
 Start by making sure you have your system up-to-date:
 
-```bash
+```shellsession
 $ sudo apt-get update
 $ sudo apt-get dist-upgrade
 # Accept upgrades, if any.
@@ -30,7 +30,7 @@ $ sudo apt-get dist-upgrade
 
 You should also make sure to suppress updates you are not interested in as you may unnecessarily install an unstable package. To opt-out of automatic updates from the `proposed` archive, create a new file under `/etc/apt/preferences.d/precise-proposed` and put the following inside it:
 
-```
+```text
 Package: *
 Pin: release a=precise-security
 Pin-Priority: 990
@@ -47,7 +47,7 @@ Pin-Priority: 400
 What the above file does is to ensure the `proposed` packages are lower in priority than their stable versions from `precise-updates`.
 Before you continue, make sure you don't have any package updates. If you do, it means something was picked up from the `proposed` archive and this should not have happened:
 
-```bash
+```shellsession
 $ sudo apt-get update
 $ sudo apt-get dist-upgrade
 # Confirm you have 0 upgrades.
@@ -55,7 +55,7 @@ $ sudo apt-get dist-upgrade
 
 Finally, install `gnome-settings-daemon` from `precise-proposed`:
 
-```bash
+```shellsession
 $ sudo apt-get install gnome-settings-daemon/precise-proposed
 ```
 
