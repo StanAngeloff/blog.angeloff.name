@@ -5,11 +5,11 @@ interface Props {
   title: string;
   date: Date;
   description?: string;
-  prevNote?: { url: string; title: string } | null;
-  nextNote?: { url: string; title: string } | null;
+  prevPost?: { url: string; title: string } | null;
+  nextPost?: { url: string; title: string } | null;
 }
 
-const { title, date, description, prevNote, nextNote } = Astro.props;
+const { title, date, description, prevPost, nextPost } = Astro.props;
 const formattedDate = date.toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
@@ -17,7 +17,12 @@ const formattedDate = date.toLocaleDateString("en-US", {
 });
 ---
 
-<BaseLayout title={title} description={description} ogType="article" activeNav="blog">
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  activeNav="blog"
+>
   <article>
     <header>
       <h1 class="note-title">{title}</h1>
@@ -30,13 +35,29 @@ const formattedDate = date.toLocaleDateString("en-US", {
       <slot />
     </section>
     <footer>
-      <p class="end-mark" style="font-size:1.125rem;letter-spacing:0.3em;margin-top:2.5rem" aria-hidden="true">&middot;</p>
-      {(prevNote || nextNote) && (
-        <nav class="note-nav">
-          {prevNote ? <a href={prevNote.url}>&larr; {prevNote.title}</a> : <span />}
-          {nextNote ? <a href={nextNote.url}>{nextNote.title} &rarr;</a> : <span />}
-        </nav>
-      )}
+      <p
+        class="end-mark"
+        style="font-size:1.125rem;letter-spacing:0.3em;margin-top:2.5rem"
+        aria-hidden="true"
+      >
+        &middot;
+      </p>
+      {
+        (prevPost || nextPost) && (
+          <nav class="post-nav">
+            {prevPost && (
+              <a href={prevPost.url}>
+                &larr; <span>{prevPost.title}</span>
+              </a>
+            )}
+            {nextPost && (
+              <a href={nextPost.url}>
+                <span>{nextPost.title}</span> &rarr;
+              </a>
+            )}
+          </nav>
+        )
+      }
     </footer>
   </article>
 </BaseLayout>

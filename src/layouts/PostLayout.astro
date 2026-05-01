@@ -5,9 +5,11 @@ interface Props {
   title: string;
   date: Date;
   description?: string;
+  prevPost?: { url: string; title: string } | null;
+  nextPost?: { url: string; title: string } | null;
 }
 
-const { title, date, description } = Astro.props;
+const { title, date, description, prevPost, nextPost } = Astro.props;
 const formattedDate = date.toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
@@ -15,7 +17,12 @@ const formattedDate = date.toLocaleDateString("en-US", {
 });
 ---
 
-<BaseLayout title={title} description={description} ogType="article" activeNav="blog">
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  activeNav="blog"
+>
   <article>
     <header>
       <h1 class="article-headline">{title}</h1>
@@ -26,6 +33,24 @@ const formattedDate = date.toLocaleDateString("en-US", {
     <section class="prose">
       <slot />
     </section>
-    <footer class="end-mark" aria-hidden="true">&compfn;</footer>
+    <footer>
+      <p class="end-mark" aria-hidden="true">&compfn;</p>
+      {
+        (prevPost || nextPost) && (
+          <nav class="post-nav">
+            {prevPost && (
+              <a href={prevPost.url}>
+                &larr; <span>{prevPost.title}</span>
+              </a>
+            )}
+            {nextPost && (
+              <a href={nextPost.url}>
+                <span>{nextPost.title}</span> &rarr;
+              </a>
+            )}
+          </nav>
+        )
+      }
+    </footer>
   </article>
 </BaseLayout>

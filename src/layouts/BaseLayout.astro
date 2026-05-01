@@ -83,28 +83,48 @@ const ogTitle = title || siteName;
   <body>
     <div class="col">
       <header class="site-header">
-        <a class="brand" href="/"><span class="prompt">~ </span>tmpfs /home/stan</a>
+        <a class="brand" href="/"
+          ><span class="prompt">~ </span>tmpfs /home/stan</a
+        >
         <nav>
-          <a href="/" aria-current={activeNav === "blog" ? "page" : undefined}>Blog</a>
+          <a href="/" aria-current={activeNav === "blog" ? "page" : undefined}
+            >Blog</a
+          >
           <span class="sep">&middot;</span>
-          <a href="/about/" aria-current={activeNav === "about" ? "page" : undefined}>About</a>
+          <a
+            href="/about/"
+            aria-current={activeNav === "about" ? "page" : undefined}>About</a
+          >
         </nav>
       </header>
       <main>
         <slot />
       </main>
       <footer class="site-footer">
-        <span class="rule" aria-hidden="true">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+        <span class="rule" aria-hidden="true"
+          >━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span
+        >
         <nav class="links" aria-label="Social links">
-          <a href="https://github.com/StanAngeloff">GitHub</a><span class="sep">&middot;</span><a
-            href="https://news.ycombinator.com/user?id=StanAngeloff">Hacker News</a><span class="sep">&middot;</span><a
-            href="https://mastodon.social/@stanangeloff" rel="me">Mastodon</a><span class="sep">&middot;</span><a
-            href="https://www.linkedin.com/in/stanangeloff/">LinkedIn</a><span class="sep">&middot;</span><a
-            href="https://x.com/StanAngeloff">X</a>
+          <a href="https://github.com/StanAngeloff">GitHub</a><span class="sep"
+            >&middot;</span
+          ><a href="https://news.ycombinator.com/user?id=StanAngeloff"
+            >Hacker News</a
+          ><span class="sep">&middot;</span><a
+            href="https://mastodon.social/@stanangeloff"
+            rel="me">Mastodon</a
+          ><span class="sep">&middot;</span><a
+            href="https://www.linkedin.com/in/stanangeloff/">LinkedIn</a
+          ><span class="sep">&middot;</span><a href="https://x.com/StanAngeloff"
+            >X</a
+          >
         </nav>
         <small class="copy">
           &copy; 2009&ndash;{new Date().getFullYear()} Stan Angeloff.<br />
-          Posts and source code are published under the MIT licence.<span class="ornament"> &sect;</span>
+          Posts and source code are published under the MIT licence.<span
+            class="ornament"
+          >
+            &sect;</span
+          >
         </small>
       </footer>
     </div>

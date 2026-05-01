@@ -5,42 +5,34 @@ import NoteLayout from "../../layouts/NoteLayout.astro";
 import fs from "node:fs";
 import path from "node:path";
 
-function postUrl(post: { id: string; data: { date: Date } }) {
-  const date = post.data.date;
-  const y = String(date.getUTCFullYear());
-  const m = String(date.getUTCMonth() + 1).padStart(2, "0");
-  const d = String(date.getUTCDate()).padStart(2, "0");
-  return `/post/${y}/${m}/${d}/${post.id.slice(11)}/`;
-}
-
 export async function getStaticPaths() {
-  const posts = await getCollection("posts");
-  const notes = posts
-    .filter((p) => p.data.type === "note")
-    .sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+  function toUrl(p: { id: string; data: { date: Date } }) {
+    const d = p.data.date;
+    return `/post/${d.getUTCFullYear()}/${String(d.getUTCMonth() + 1).padStart(2, "0")}/${String(d.getUTCDate()).padStart(2, "0")}/${p.id.slice(11)}/`;
+  }
 
-  return posts.map((post) => {
+  const posts = await getCollection("posts");
+  const sorted = posts.sort(
+    (a, b) => a.data.date.getTime() - b.data.date.getTime(),
+  );
+
+  return sorted.map((post, idx) => {
     const date = post.data.date;
     const y = String(date.getUTCFullYear());
     const m = String(date.getUTCMonth() + 1).padStart(2, "0");
     const d = String(date.getUTCDate()).padStart(2, "0");
     const titleSlug = post.id.slice(11);
 
-    let prevNote = null;
-    let nextNote = null;
-    if (post.data.type === "note") {
-      const idx = notes.findIndex((n) => n.id === post.id);
-      if (idx > 0) {
-        prevNote = { url: postUrl(notes[idx - 1]), title: notes[idx - 1].data.title };
-      }
-      if (idx < notes.length - 1) {
-        nextNote = { url: postUrl(notes[idx + 1]), title: notes[idx + 1].data.title };
-      }
-    }
+    const prev = idx > 0 ? sorted[idx - 1] : null;
+    const next = idx < sorted.length - 1 ? sorted[idx + 1] : null;
 
     return {
       params: { slug: `${y}/${m}/${d}/${titleSlug}` },
-      props: { post, prevNote, nextNote },
+      props: {
+        post,
+        prevPost: prev ? { url: toUrl(prev), title: prev.data.title } : null,
+        nextPost: next ? { url: toUrl(next), title: next.data.title } : null,
+      },
     };
   });
 }
@@ -58,28 +50,32 @@ function extractDescription(id: string): string | undefined {
   }
 }
 
-const { post, prevNote, nextNote } = Astro.props;
+const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await render(post);
 const description = extractDescription(post.id);
 const isNote = post.data.type === "note";
 ---
 
-{isNote ? (
-  <NoteLayout
-    title={post.data.title}
-    date={post.data.date}
-    description={description}
-    prevNote={prevNote}
-    nextNote={nextNote}
-  >
-    <Content />
-  </NoteLayout>
-) : (
-  <PostLayout
-    title={post.data.title}
-    date={post.data.date}
-    description={description}
-  >
-    <Content />
-  </PostLayout>
-)}
+{
+  isNote ? (
+    <NoteLayout
+      title={post.data.title}
+      date={post.data.date}
+      description={description}
+      prevPost={prevPost}
+      nextPost={nextPost}
+    >
+      <Content />
+    </NoteLayout>
+  ) : (
+    <PostLayout
+      title={post.data.title}
+      date={post.data.date}
+      description={description}
+      prevPost={prevPost}
+      nextPost={nextPost}
+    >
+      <Content />
+    </PostLayout>
+  )
+}
