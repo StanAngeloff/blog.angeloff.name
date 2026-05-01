@@ -1,7 +1,0 @@
----
----
-
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
-
-User-agent: *
-Crawl-delay: 1

@@ -1,0 +1,50 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const siteName = 'tmpfs /home/stan';
+const siteDescription = "Stan Angeloff's blog, a collection of thoughts, rants & research";
+const { title, description = siteDescription } = Astro.props;
+const pageTitle = title ? `${title} · ${siteName}` : siteName;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageTitle}</title>
+  <meta name="description" content={description}>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="alternate" type="application/atom+xml" title={siteName} href="/atom.xml">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href={canonicalUrl}>
+  <meta property="og:title" content={pageTitle}>
+  <meta property="og:url" content={canonicalUrl}>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@StanAngeloff">
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><strong><a href="/">{siteName}</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="https://github.com/StanAngeloff">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <slot />
+  </main>
+  <footer class="container">
+    <small>&copy; {new Date().getFullYear()} Stan Angeloff. The posts and source code (Gists) in this blog, unless stated otherwise, are made available under the MIT License.</small>
+  </footer>
+</body>
+</html>
