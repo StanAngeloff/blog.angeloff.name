@@ -6,6 +6,7 @@ const posts = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
+    type: z.enum(["article", "note"]).default("article"),
   }),
 });
 

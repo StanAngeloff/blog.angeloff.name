@@ -1,20 +1,46 @@
 ---
 import { getCollection, render } from "astro:content";
 import PostLayout from "../../layouts/PostLayout.astro";
+import NoteLayout from "../../layouts/NoteLayout.astro";
 import fs from "node:fs";
 import path from "node:path";
 
+function postUrl(post: { id: string; data: { date: Date } }) {
+  const date = post.data.date;
+  const y = String(date.getUTCFullYear());
+  const m = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const d = String(date.getUTCDate()).padStart(2, "0");
+  return `/post/${y}/${m}/${d}/${post.id.slice(11)}/`;
+}
+
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
+  const notes = posts
+    .filter((p) => p.data.type === "note")
+    .sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+
   return posts.map((post) => {
     const date = post.data.date;
     const y = String(date.getUTCFullYear());
     const m = String(date.getUTCMonth() + 1).padStart(2, "0");
     const d = String(date.getUTCDate()).padStart(2, "0");
     const titleSlug = post.id.slice(11);
+
+    let prevNote = null;
+    let nextNote = null;
+    if (post.data.type === "note") {
+      const idx = notes.findIndex((n) => n.id === post.id);
+      if (idx > 0) {
+        prevNote = { url: postUrl(notes[idx - 1]), title: notes[idx - 1].data.title };
+      }
+      if (idx < notes.length - 1) {
+        nextNote = { url: postUrl(notes[idx + 1]), title: notes[idx + 1].data.title };
+      }
+    }
+
     return {
       params: { slug: `${y}/${m}/${d}/${titleSlug}` },
-      props: { post },
+      props: { post, prevNote, nextNote },
     };
   });
 }
@@ -32,15 +58,28 @@ function extractDescription(id: string): string | undefined {
   }
 }
 
-const { post } = Astro.props;
+const { post, prevNote, nextNote } = Astro.props;
 const { Content } = await render(post);
 const description = extractDescription(post.id);
+const isNote = post.data.type === "note";
 ---
 
-<PostLayout
-  title={post.data.title}
-  date={post.data.date}
-  description={description}
->
-  <Content />
-</PostLayout>
+{isNote ? (
+  <NoteLayout
+    title={post.data.title}
+    date={post.data.date}
+    description={description}
+    prevNote={prevNote}
+    nextNote={nextNote}
+  >
+    <Content />
+  </NoteLayout>
+) : (
+  <PostLayout
+    title={post.data.title}
+    date={post.data.date}
+    description={description}
+  >
+    <Content />
+  </PostLayout>
+)}

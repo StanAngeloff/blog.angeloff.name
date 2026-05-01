@@ -15,59 +15,41 @@ function postUrl(post: (typeof sorted)[0]) {
   return `/post/${y}/${m}/${d}/${post.id.slice(11)}/`;
 }
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
 type PostEntry = (typeof sorted)[0];
-const byYear = new Map<number, Map<number, PostEntry[]>>();
+const byYear = new Map<number, PostEntry[]>();
 for (const post of sorted) {
   const y = post.data.date.getUTCFullYear();
-  const m = post.data.date.getUTCMonth();
-  if (!byYear.has(y)) byYear.set(y, new Map());
-  const yearMap = byYear.get(y)!;
-  if (!yearMap.has(m)) yearMap.set(m, []);
-  yearMap.get(m)!.push(post);
+  if (!byYear.has(y)) byYear.set(y, []);
+  byYear.get(y)!.push(post);
 }
 ---
 
-<BaseLayout>
+<BaseLayout activeNav="blog">
+  <p class="lede">a collection of thoughts, rants &amp; research</p>
   {
-    [...byYear.entries()].map(([year, monthMap]) => (
-      <section>
-        <h2>{year}</h2>
-        {[...monthMap.entries()].map(([month, posts]) => (
-          <div>
-            <h3>{months[month]}</h3>
-            <ul>
-              {posts.map((post) => (
-                <li>
-                  <a href={postUrl(post)}>{post.data.title}</a>
-                  <small>
-                    <time datetime={post.data.date.toISOString()}>
-                      {post.data.date.toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </time>
-                  </small>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </section>
+    [...byYear.entries()].map(([year, posts]) => (
+      <>
+        <div class="year-rule">
+          <span class="y">{year}</span>
+          <span class="line" />
+        </div>
+        <ul class="post-list">
+          {posts.map((post) => (
+            <li class={post.data.type === "note" ? "note" : undefined}>
+              <span class="date">
+                {post.data.date.toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </span>
+              <span class="glyph">{post.data.type === "note" ? "¶" : "›"}</span>
+              <span class="title">
+                <a href={postUrl(post)}>{post.data.title}</a>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </>
     ))
   }
 </BaseLayout>

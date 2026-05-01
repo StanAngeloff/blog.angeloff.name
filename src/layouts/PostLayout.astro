@@ -8,22 +8,24 @@ interface Props {
 }
 
 const { title, date, description } = Astro.props;
+const formattedDate = date.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 ---
 
-<BaseLayout title={title} description={description} ogType="article">
+<BaseLayout title={title} description={description} ogType="article" activeNav="blog">
   <article>
     <header>
-      <h1>{title}</h1>
-      <time datetime={date.toISOString()}>
-        {
-          date.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })
-        }
-      </time>
+      <h1 class="article-headline">{title}</h1>
+      <p class="article-meta">
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+      </p>
     </header>
-    <slot />
+    <section class="prose">
+      <slot />
+    </section>
+    <footer class="end-mark" aria-hidden="true">&compfn;</footer>
   </article>
 </BaseLayout>

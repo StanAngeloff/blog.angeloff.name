@@ -3,15 +3,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="404: Page not found">
-  <article>
-    <h1>404: Page not found</h1>
-    <p>
-      This blog has been rewritten more times than some of the posts in it. A
-      few URLs didn't survive the journey.
+  <article class="fourohfour">
+    <p class="glyph" aria-hidden="true">&empty;</p>
+    <h1 class="label">404 &mdash; Page not found</h1>
+    <p class="quote">
+      &ldquo;This blog has been rewritten more times than some of the posts in it.
+      A few URLs didn&rsquo;t survive the journey.&rdquo;
     </p>
-    <p>
-      The content is still here though — try <a href="/">the homepage</a> and have
-      a browse.
-    </p>
+    <p class="back"><a href="/">&larr; Back to the homepage</a></p>
   </article>
 </BaseLayout>

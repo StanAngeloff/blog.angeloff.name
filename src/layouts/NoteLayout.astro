@@ -1,0 +1,42 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  date: Date;
+  description?: string;
+  prevNote?: { url: string; title: string } | null;
+  nextNote?: { url: string; title: string } | null;
+}
+
+const { title, date, description, prevNote, nextNote } = Astro.props;
+const formattedDate = date.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<BaseLayout title={title} description={description} ogType="article" activeNav="blog">
+  <article>
+    <header>
+      <h1 class="note-title">{title}</h1>
+      <p class="note-meta">
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+        <span class="note-meta-glyph">&para;</span>
+      </p>
+    </header>
+    <section class="prose">
+      <slot />
+    </section>
+    <footer>
+      <p class="end-mark" style="font-size:1.125rem;letter-spacing:0.3em;margin-top:2.5rem" aria-hidden="true">&middot;</p>
+      {(prevNote || nextNote) && (
+        <nav class="note-nav">
+          {prevNote ? <a href={prevNote.url}>&larr; {prevNote.title}</a> : <span />}
+          {nextNote ? <a href={nextNote.url}>{nextNote.title} &rarr;</a> : <span />}
+        </nav>
+      )}
+    </footer>
+  </article>
+</BaseLayout>
