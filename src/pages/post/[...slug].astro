@@ -53,6 +53,7 @@ function extractDescription(id: string): string | undefined {
 const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await render(post);
 const description = extractDescription(post.id);
+const ogImage = new URL(`/og/${post.id}.png`, Astro.site).href;
 const isNote = post.data.type === "note";
 ---
 
@@ -62,6 +63,7 @@ const isNote = post.data.type === "note";
       title={post.data.title}
       date={post.data.date}
       description={description}
+      ogImage={ogImage}
       prevPost={prevPost}
       nextPost={nextPost}
     >
@@ -72,6 +74,7 @@ const isNote = post.data.type === "note";
       title={post.data.title}
       date={post.data.date}
       description={description}
+      ogImage={ogImage}
       prevPost={prevPost}
       nextPost={nextPost}
     >

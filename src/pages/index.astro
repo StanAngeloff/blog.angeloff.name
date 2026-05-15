@@ -24,7 +24,7 @@ for (const post of sorted) {
 }
 ---
 
-<BaseLayout activeNav="blog">
+<BaseLayout activeNav="blog" ogImage={new URL("/og/default.png", Astro.site).href}>
   <p class="lede">a collection of thoughts, rants &amp; research</p>
   {
     [...byYear.entries()].map(([year, posts]) => (

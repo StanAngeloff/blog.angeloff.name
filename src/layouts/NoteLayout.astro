@@ -5,11 +5,12 @@ interface Props {
   title: string;
   date: Date;
   description?: string;
+  ogImage?: string;
   prevPost?: { url: string; title: string } | null;
   nextPost?: { url: string; title: string } | null;
 }
 
-const { title, date, description, prevPost, nextPost } = Astro.props;
+const { title, date, description, ogImage, prevPost, nextPost } = Astro.props;
 const formattedDate = date.toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
@@ -21,6 +22,7 @@ const formattedDate = date.toLocaleDateString("en-US", {
   title={title}
   description={description}
   ogType="article"
+  ogImage={ogImage}
   activeNav="blog"
 >
   <article>

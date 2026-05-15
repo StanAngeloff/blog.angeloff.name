@@ -31,6 +31,11 @@ export default defineConfig({
   output: "static",
   trailingSlash: "always",
   integrations: [sitemap(), mdx()],
+  vite: {
+    ssr: {
+      external: ["satori", "@resvg/resvg-js"],
+    },
+  },
   markdown: {
     shikiConfig: {
       themes: {

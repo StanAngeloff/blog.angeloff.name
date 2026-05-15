@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="About" activeNav="about">
+<BaseLayout title="About" activeNav="about" ogImage={new URL("/og/default.png", Astro.site).href}>
   <article>
     <h1 class="about-title">About</h1>
     <div class="about-title-rule">

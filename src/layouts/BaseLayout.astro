@@ -3,6 +3,7 @@ interface Props {
   title?: string;
   description?: string;
   ogType?: string;
+  ogImage?: string;
   activeNav?: string;
 }
 
@@ -14,6 +15,7 @@ const {
   title,
   description = siteDescription,
   ogType = "website",
+  ogImage,
   activeNav,
 } = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
@@ -39,11 +41,13 @@ const ogTitle = title || siteName;
     <meta property="og:type" content={ogType} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="en_US" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
     <meta name="twitter:site" content="@StanAngeloff" />
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
 
     <link
       rel="alternate"
