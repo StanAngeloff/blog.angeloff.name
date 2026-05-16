@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import { remarkAlert } from "remark-github-blockquote-alert";
 
 /** Shellsession grammars treat # as a root prompt, not a comment.
  *  Re-color entire #-prefixed lines as comments. */
@@ -37,6 +38,7 @@ export default defineConfig({
     },
   },
   markdown: {
+    remarkPlugins: [remarkAlert],
     shikiConfig: {
       themes: {
         light: "catppuccin-latte",
