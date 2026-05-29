@@ -27,6 +27,29 @@ const shellsessionComments = {
   },
 };
 
+/** Inject the "dictated" AI disclosure after the first paragraph of any post
+ *  whose frontmatter sets `dictated: true`, so it lands in the content flow
+ *  rather than above the article. */
+const aiDisclosureHtml =
+  '<aside class="ai-disclosure" aria-label="How this post was written">' +
+  '<span class="ai-disclosure-mark" aria-hidden="true">✦</span>' +
+  "<p><strong>Dictated, not typed — but read.</strong> " +
+  "I thought this post out loud and " +
+  '<a href="https://github.com/Flemma-Dev/voxize">transcribed</a> it, then wrote it ' +
+  "up with Claude Code, which had direct access to the code and config it describes. " +
+  "I read every word; the ideas and direction are mine, the prose a collaboration.</p>" +
+  "</aside>";
+
+function remarkAiDisclosure() {
+  return (tree, file) => {
+    if (!file?.data?.astro?.frontmatter?.dictated) return;
+    const idx = tree.children.findIndex((node) => node.type === "paragraph");
+    const html = { type: "html", value: aiDisclosureHtml };
+    if (idx === -1) tree.children.unshift(html);
+    else tree.children.splice(idx + 1, 0, html);
+  };
+}
+
 export default defineConfig({
   site: "https://blog.angeloff.name",
   output: "static",
@@ -38,7 +61,7 @@ export default defineConfig({
     },
   },
   markdown: {
-    remarkPlugins: [remarkAlert],
+    remarkPlugins: [remarkAlert, remarkAiDisclosure],
     shikiConfig: {
       themes: {
         light: "catppuccin-latte",
