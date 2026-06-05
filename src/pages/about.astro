@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const description =
+  "Stan Angeloff — hands-on engineer with 20+ years building production systems. AI-agent infrastructure, platform & developer experience. Based in Sofia, Bulgaria.";
 ---
 
-<BaseLayout title="About" activeNav="about" ogImage={new URL("/og/default.png", Astro.site).href}>
+<BaseLayout title="About" activeNav="about" description={description} ogImage={new URL("/og/default.png", Astro.site).href}>
   <article>
     <h1 class="about-title">About</h1>
     <div class="about-title-rule">
@@ -12,9 +15,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <div class="prose">
       <p>
-        I'm Stan Angeloff — CTO by day, tinkerer by heart. Based in Sofia,
-        Bulgaria. I run the tech at <a href="https://www.luup.com/">Luup</a>.
-        This blog is my personal space for thoughts, rants &amp; research.
+        I'm Stan Angeloff &mdash; a hands-on engineer with 20+ years of
+        building production systems. Based in Sofia, Bulgaria. I go deepest
+        as a senior individual contributor &mdash; give me a hard problem
+        and room to work, not a delivery board to manage. This blog is my
+        personal space for thoughts, rants &amp; research.
       </p>
 
       <h2><span class="accent">&#9670;</span>What I'm up to (2025&mdash;)</h2>
@@ -36,6 +41,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         yourself.
       </p>
       <p>
+        By day I'm CTO and hands-on architect at <a
+          href="https://www.luup.com/">Luup</a
+        > &mdash; a white-label &ldquo;Community Commerce&rdquo; platform.
+        The majority of the codebase is mine. I also set up the team's
+        AI-agent engineering practices &mdash; review skills, production
+        guardrails, the works &mdash; so the whole team can adopt LLMs
+        safely.
+      </p>
+      <p>
         I'm also experimenting with <a
           href="https://github.com/Flemma-Dev/voxize">Voxize</a
         >, a voice-to-text tool for Linux/Wayland &mdash; my daily driver for
@@ -45,15 +59,53 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2><span class="accent">&#9670;</span>Technical background</h2>
       <p>
         I've been at this for over two decades, touching just about everything
-        along the way. Some highlights from the archives:
+        along the way. Some highlights from the day job:
+      </p>
+      <ul>
+        <li>
+          <strong>Nuclear</strong> &mdash; built an operations platform for the
+          Kozloduy nuclear power plant (2004 &mdash; .NET + AJAX before
+          &ldquo;AJAX&rdquo; was coined)
+        </li>
+        <li>
+          <strong>Enterprise B2B</strong> &mdash; Saudi Aramco, the UK Post
+          Office, Forever Living (&pound;1M ARR) &mdash; a decade of SaaS
+          platforms at <a href="https://psp-webtech.co.uk">PSP</a>
+        </li>
+        <li>
+          <strong>Fraud &amp; fintech</strong> &mdash; real-time
+          affiliate-fraud detection at ~1M conversions/day; an immutable,
+          double-entry accounting ledger on Postgres
+        </li>
+        <li>
+          <strong>Migrations</strong> &mdash; replatformed ~50 storefronts to
+          Shopify Plus with zero prior experience; reverse-engineered
+          ~100,000 lines of Zoho Deluge to retrofit an API over a legacy CRM
+        </li>
+      </ul>
+      <p>
+        And from the open-source archives:
       </p>
       <ul>
         <li>
           <strong>CoffeeScript</strong> &mdash; used to be a top 10 contributor to
           <a
-            href="https://github.com/jashkenas/coffeescript/graphs/contributors"
+            href="https://github.com/jashkenas/coffeescript/graphs/contributors?all=1"
             >jashkenas/coffeescript</a
           > (now sitting at #9, but who's counting)
+        </li>
+        <li>
+          <strong>PHP</strong> &mdash; past maintainer of <a
+            href="https://github.com/StanAngeloff/php.vim">php.vim</a
+          >, the de-facto Vim syntax for PHP (473+ stars) until Tree-sitter
+          superseded it
+        </li>
+        <li>
+          <strong>JavaScript</strong> &mdash; built <a
+            href="https://github.com/StanAngeloff/zoey">Zoey</a
+          >, a lightweight mobile app framework, and <a
+            href="https://github.com/StanAngeloff/lotte">Lotte</a
+          >, headless browser testing with PhantomJS before Puppeteer existed
         </li>
         <li>
           <strong>Ruby</strong> &mdash; built <a
@@ -62,18 +114,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           > and <a href="https://github.com/StanAngeloff/compass-canvas"
             >compass-canvas</a
           >, dynamic image generation in pure Sass
-        </li>
-        <li>
-          <strong>PHP</strong> &mdash; created <a
-            href="https://github.com/StanAngeloff/php.vim">php.vim</a
-          >, the community-standard Vim syntax for PHP (473+ stars)
-        </li>
-        <li>
-          <strong>JavaScript</strong> &mdash; built <a
-            href="https://github.com/StanAngeloff/zoey">Zoey</a
-          >, a lightweight mobile app framework, and <a
-            href="https://github.com/StanAngeloff/lotte">Lotte</a
-          >, headless browser testing with PhantomJS before Puppeteer existed
         </li>
         <li>
           <strong>Shell &amp; terminal</strong> &mdash; a big believer in open, free,
@@ -100,8 +140,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <h2><span class="accent">&#9670;</span>The honest bit</h2>
       <p>
-        As you can tell, most of those projects are pretty old. I haven't been
-        as active in the OSS community as I'd like &mdash; but I'm still here,
+        As you can tell, most of those OSS projects are pretty old. I haven't been
+        as active in the community as I'd like &mdash; however, I'm still here,
         still tinkering, and Flemma is where that energy goes now.
       </p>
 
@@ -119,6 +159,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           href="https://x.com/StanAngeloff">X</a
         >
       </p>
+
+      <div class="about-photo">
+        <img
+          src="/assets/images/stan-angeloff.jpg"
+          alt="Stan Angeloff"
+          width="280"
+          height="280"
+          loading="lazy"
+        />
+      </div>
     </div>
 
     <div class="end-mark">&sect;</div>

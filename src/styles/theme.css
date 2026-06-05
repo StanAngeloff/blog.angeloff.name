@@ -610,6 +610,17 @@ img {
   opacity: 0.55;
 }
 
+.about-photo {
+  margin: 2.5rem 0 0;
+  text-align: center;
+}
+
+.about-photo img {
+  border-radius: 12px;
+  border: 1px solid var(--ink-faint);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
 .mobile-break {
   display: none;
 }
