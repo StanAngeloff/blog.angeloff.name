@@ -5,7 +5,7 @@ date: 2026-05-15
 
 I spend an unreasonable amount of time typing instructions to AI agents. A few months ago, I decided to streamline this process and built my own dictation system called [Voxize][voxize]. I have it bound to <kbd>Super + S</kbd> on my [NixOS machine][nix-meridian]. I press the hotkey to launch the overlay, talk into the microphone and let the software do the heavy lifting.
 
-<img src="/assets/images/2026/05/voxize-app-preview.webp" alt="" width="470" height="147" alt="Voxize app preview">
+<img src="https://media.githubusercontent.com/media/Flemma-Dev/voxize/main/assets/dictation-recording.png" alt="" width="450" height="176" alt="Voxize app preview">
 
 It has performed exceptionally well, especially around dense technical subjects. But the architecture has a frustrating bottleneck. It currently uses a three-phase pipeline:
 1. **Live Preview:** A throwaway WebSocket stream via OpenAI's `gpt-4o-mini-transcribe` [($0.003/min)][openai-pricing] that gives me visual feedback while I speak.
