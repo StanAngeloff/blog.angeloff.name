@@ -8,6 +8,7 @@ I spend an unreasonable amount of time typing instructions to AI agents. A few m
 <img src="https://media.githubusercontent.com/media/Flemma-Dev/voxize/main/assets/dictation-recording.png" alt="" width="450" height="176" alt="Voxize app preview">
 
 It has performed exceptionally well, especially around dense technical subjects. But the architecture has a frustrating bottleneck. It currently uses a three-phase pipeline:
+
 1. **Live Preview:** A throwaway WebSocket stream via OpenAI's `gpt-4o-mini-transcribe` [($0.003/min)][openai-pricing] that gives me visual feedback while I speak.
 2. **Batch:** Once I am done speaking and stop the recording, the full WAV file is sent to `gpt-4o-transcribe` ($0.006/min) for the authoritative transcript.
 3. **Cleanup:** A fast LLM pass via `gpt-5.4-nano` to fix formatting and apply custom vocabulary rules.
@@ -94,7 +95,6 @@ My spike test proved that the latency of my three-phase pipeline is a necessary 
 Takeaway: Always validate tools against your own messy, real-world data and never blindly trust a leaderboard.
 
 Happy hacking!
-
 
 [voxize]: https://github.com/Flemma-Dev/voxize
 [nix-meridian]: https://github.com/StanAngeloff/nix-meridian

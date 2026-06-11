@@ -23,9 +23,7 @@ async function loadFonts() {
   function extractUrl(family: string): string {
     const escaped = family.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const match = css.match(
-      new RegExp(
-        `font-family:\\s*'${escaped}'[^}]+src:\\s*url\\(([^)]+)\\)`,
-      ),
+      new RegExp(`font-family:\\s*'${escaped}'[^}]+src:\\s*url\\(([^)]+)\\)`),
     );
     if (!match) throw new Error(`Font URL not found for ${family}`);
     return match[1];

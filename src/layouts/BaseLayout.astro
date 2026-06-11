@@ -43,7 +43,10 @@ const ogTitle = title || siteName;
     <meta property="og:locale" content="en_US" />
     {ogImage && <meta property="og:image" content={ogImage} />}
 
-    <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+    <meta
+      name="twitter:card"
+      content={ogImage ? "summary_large_image" : "summary"}
+    />
     <meta name="twitter:site" content="@StanAngeloff" />
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={description} />

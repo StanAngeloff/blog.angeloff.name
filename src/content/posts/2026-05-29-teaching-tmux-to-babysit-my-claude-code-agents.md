@@ -79,12 +79,12 @@ It is two halves that never touch directly — they meet on a single tmux variab
 
 Claude Code [hooks][cc-hooks] run a shell command at set points in a session. The ones I use:
 
-* `PermissionRequest` — wants to do something unauthorised, waiting on a yes/no.
-* `Elicitation` — asking you a structured question.
-* `Stop` / `StopFailure` — the turn ended.
-* `PostToolUse` — a tool just finished.
-* `UserPromptSubmit` — you sent a new prompt.
-* `SessionEnd` — Claude exited.
+- `PermissionRequest` — wants to do something unauthorised, waiting on a yes/no.
+- `Elicitation` — asking you a structured question.
+- `Stop` / `StopFailure` — the turn ended.
+- `PostToolUse` — a tool just finished.
+- `UserPromptSubmit` — you sent a new prompt.
+- `SessionEnd` — Claude exited.
 
 The glue is one variable: `$TMUX_PANE`. tmux sets it in every pane and Claude Code inherits it, so a hook always knows which window it is running in. Flagging that window is one command:
 
@@ -142,10 +142,10 @@ hooks = {
 
 `Elicitation` mirrors `PermissionRequest` (without the chime[^1]), `StopFailure` mirrors `Stop`, `SessionEnd` mirrors `UserPromptSubmit`. The logic:
 
-* **blocked** (`PermissionRequest` / `Elicitation`) → `permission` / `elicitation` — amber.
-* **finished** (`Stop` / `StopFailure`) → `idle` — green.
-* **tool ran** (`PostToolUse`) → clear it if we were amber; you have just approved it.
-* **new prompt** / **session end** → clear everything.
+- **blocked** (`PermissionRequest` / `Elicitation`) → `permission` / `elicitation` — amber.
+- **finished** (`Stop` / `StopFailure`) → `idle` — green.
+- **tool ran** (`PostToolUse`) → clear it if we were amber; you have just approved it.
+- **new prompt** / **session end** → clear everything.
 
 Nothing flags "working" — that is the default, and a row of nine busy dots would just be noise.
 
@@ -181,9 +181,9 @@ set-hook -g after-select-window \
   'if -F "#{==:#{@claude-state},idle}" "set -wu @claude-state"'
 ```
 
-It only clears `idle`, never `permission` / `elicitation`. Green means "something to read", and switching there reads it; amber means "something to *do*", which a glance does not. The amber dot survives until the work happens (`PostToolUse` → `reset-blocked`) or you send a new prompt.
+It only clears `idle`, never `permission` / `elicitation`. Green means "something to read", and switching there reads it; amber means "something to _do_", which a glance does not. The amber dot survives until the work happens (`PostToolUse` → `reset-blocked`) or you send a new prompt.
 
-One last nicety: the focused tab uses a separate `window-status-current-format` with no dot logic at all — if you are looking at a window, you do not need telling what is in it. So dots only ever appear on the windows you are *not* in.
+One last nicety: the focused tab uses a separate `window-status-current-format` with no dot logic at all — if you are looking at a window, you do not need telling what is in it. So dots only ever appear on the windows you are _not_ in.
 
 ### Start to finish
 
@@ -229,7 +229,7 @@ It is not perfect:
 
 **Forked subagents sometimes flip a window amber for nothing.** With subagent forking on, spawning one occasionally turns the window amber when nothing is waiting. Something inside the fork trips a blocking hook; I have not pinned down what yet.
 
-**The amber dot clears a beat late.** I clear it on `PostToolUse` — when the tool *finishes*, not when you approve it. Green-light a long build or a `sleep 30` and the window stays amber for the whole run, though it stopped needing you the second you said yes. A `PreToolUse` hook would clear it sooner; that one is on the list.
+**The amber dot clears a beat late.** I clear it on `PostToolUse` — when the tool _finishes_, not when you approve it. Green-light a long build or a `sleep 30` and the window stays amber for the whole run, though it stopped needing you the second you said yes. A `PreToolUse` hook would clear it sooner; that one is on the list.
 
 ### Wrapping up
 
@@ -244,7 +244,6 @@ The full version lives in my [nix-meridian][nix-meridian] config under `home/app
 Happy hacking!
 
 [^1]: Both blocking states — a permission request and an elicitation — show the same amber dot, but only `PermissionRequest` rings the bell; that is the one that tends to catch me mid-coffee.
-
 
 [nix-meridian]: https://github.com/StanAngeloff/nix-meridian
 [cc-hooks]: https://code.claude.com/docs/en/hooks
