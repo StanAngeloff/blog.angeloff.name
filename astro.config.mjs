@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import { remarkAlert } from "remark-github-blockquote-alert";
+import mastodonSummary from "./src/integrations/mastodon-summary.mjs";
 
 /** Shellsession grammars treat # as a root prompt, not a comment.
  *  Re-color entire #-prefixed lines as comments. */
@@ -54,7 +55,7 @@ export default defineConfig({
   site: "https://blog.angeloff.name",
   output: "static",
   trailingSlash: "always",
-  integrations: [sitemap(), mdx()],
+  integrations: [sitemap(), mdx(), mastodonSummary()],
   vite: {
     ssr: {
       external: ["satori", "@resvg/resvg-js"],

@@ -8,6 +8,7 @@ const posts = defineCollection({
     date: z.coerce.date(),
     type: z.enum(["article", "note"]).default("article"),
     dictated: z.boolean().default(false),
+    mastodon: z.string().url().optional(),
   }),
 });
 

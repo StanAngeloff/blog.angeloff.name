@@ -2,6 +2,7 @@
 title: "Teaching tmux to babysit my Claude Code agents"
 date: 2026-05-29
 dictated: true
+mastodon: https://mastodon.social/@stanangeloff/116730574811459598
 ---
 
 If you are like me, you no longer run one Claude Code session — you run a small fleet. One window is building a feature in a TypeScript monorepo, another is reviewing a colleague's pull request, a third is chasing a redraw bug in a Neovim plugin. tmux makes this easy: a window per agent, <kbd>Alt</kbd> + <kbd>1</kbd>–<kbd>9</kbd> to jump between them. Often they are not even different projects — just git worktrees of the same repo, one agent per branch.

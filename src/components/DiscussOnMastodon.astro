@@ -1,0 +1,101 @@
+---
+interface Props {
+  mastodonUrl?: string;
+  postId: string;
+  postTitle: string;
+  kind: "article" | "note";
+}
+
+const { mastodonUrl, postId, postTitle, kind } = Astro.props;
+const productionUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+const devScript = `(function () {
+  var button = document.getElementById("mastodon-post-button");
+  if (!button) return;
+  var status = document.getElementById("mastodon-dev-status");
+  button.addEventListener("click", function () {
+    var win = window.open("about:blank", "_blank");
+    if (win) win.document.body.textContent = "Generating summary…";
+    button.disabled = true;
+    status.hidden = false;
+    status.textContent = "Generating summary…";
+    fetch(
+      "/__mastodon-summary?id=" + encodeURIComponent(button.dataset.postId)
+    )
+      .then(function (res) {
+        return res.json().then(function (json) {
+          if (!res.ok) throw new Error(json.error || "HTTP " + res.status);
+          return json;
+        });
+      })
+      .then(function (json) {
+        var share =
+          "https://mastodon.social/share?text=" +
+          encodeURIComponent("\\u270f\\ufe0f " + button.dataset.title + "\\n\\n" + json.summary + "\\n\\n" + button.dataset.url);
+        if (win) win.location.href = share;
+        status.textContent = "";
+        var link = document.createElement("a");
+        link.href = share;
+        link.target = "_blank";
+        link.textContent = "open pre-filled compose";
+        status.append(
+          json.summary + " — ",
+          link,
+          ". After posting, add mastodon: <status URL> to the frontmatter."
+        );
+      })
+      .catch(function (error) {
+        if (win) win.document.body.textContent = "Failed: " + error.message;
+        status.textContent = "Failed: " + error.message;
+      })
+      .finally(function () {
+        button.disabled = false;
+      });
+  });
+})();`;
+---
+
+{
+  mastodonUrl && (
+    <div class="mastodon-box">
+      <a href={mastodonUrl}>Discuss this {kind} on Mastodon</a>
+    </div>
+  )
+}
+
+{
+  !mastodonUrl && import.meta.env.DEV && (
+    <div class="mastodon-box">
+      <button
+        type="button"
+        id="mastodon-post-button"
+        data-post-id={postId}
+        data-url={productionUrl}
+        data-title={postTitle}
+      >
+        <svg
+          class="mastodon-dev-icon"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+        </svg>
+        <span>Post on Mastodon</span>
+      </button>
+      <p class="mastodon-dev-status" id="mastodon-dev-status" hidden />
+    </div>
+  )
+}
+
+{
+  !mastodonUrl && import.meta.env.DEV && (
+    <script is:inline set:html={devScript} />
+  )
+}
