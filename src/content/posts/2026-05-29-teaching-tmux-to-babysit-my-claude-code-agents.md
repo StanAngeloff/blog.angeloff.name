@@ -16,9 +16,10 @@ So I taught tmux to show it. Every window now carries a coloured dot for the Cla
 <style>
   /* Post-local styles, kept out of the site-wide stylesheet. */
 
-  /* Coloured square markers for the amber / green key. */
+  /* Coloured circle markers for the amber / green key. */
   .prose ul.dot-key li:nth-child(1)::marker { color: #c2810f; }
   .prose ul.dot-key li:nth-child(2)::marker { color: #2e8b3d; }
+  .prose ul.dot-key li:nth-child(3)::marker { content: "\25CB  "; }
   [data-theme="dark"] .prose ul.dot-key li:nth-child(1)::marker { color: #e0a73a; }
   [data-theme="dark"] .prose ul.dot-key li:nth-child(2)::marker { color: #4caf50; }
   @media (prefers-color-scheme: dark) {
@@ -66,10 +67,10 @@ So I taught tmux to show it. Every window now carries a coloured dot for the Cla
   <div class="tmux-bar" aria-hidden="true">
     <span class="tb-session">default</span>
     <span class="tb-win">1│ <span class="tb-dot tb-amber">●</span> payments</span>
-    <span class="tb-win">2│ flemma</span>
+    <span class="tb-win">2│ <span class="tb-dot tb-green">●</span> flemma</span>
     <span class="tb-win tb-cur">3│ blog</span>
   </div>
-  <figcaption>My tmux status bar: window 1 (payments) is blocked and waiting on me — the amber dot — while window 3, blog, is the one I am looking at, so it carries no dot.</figcaption>
+  <figcaption>My tmux status bar: window 1 (payments) is blocked and waiting on me — the amber dot; window 2 (flemma) finished and has a response ready — the green dot; window 3 (blog) is the one I am looking at, so it carries no dot.</figcaption>
 </figure>
 
 The green dot clears itself the instant I switch to that window — by the time I am reading, it is gone. The amber dot is stubborner: it stays until I have actually dealt with the request, because glancing at a window is not the same as answering it.

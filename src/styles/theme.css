@@ -452,7 +452,7 @@ img {
 }
 
 .prose ul li::marker {
-  content: "\25AA  ";
+  content: "\25CF  ";
   color: var(--ink-mute);
 }
 
